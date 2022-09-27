@@ -1,0 +1,5 @@
+use-singularity: true
+singularity-prefix: /storage/userdata/singularity_cache
+singularity-args: --bind /storage --bind $HOME
+configfile: config_0.2.3-validation/config.yaml
+cores: 15
