@@ -93,7 +93,7 @@ hotspot_report:
   hotspot_mutations: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/Hotspots_combined_regions_nodups.csv"
 
 manta_config_t:
-  extra: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/pool1_pool2.sort.merged.padded20.cnv200.hg19.split_fusion_genes.210608.bed.gz"
+  extra: "--exome --callRegions /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/pool1_pool2.sort.merged.padded20.cnv200.hg19.split_fusion_genes.210608.bed.gz"
 
 msisensor_pro:
   PoN: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/PoN/Msisensor_pro_reference_nextseq_36.list_baseline"
