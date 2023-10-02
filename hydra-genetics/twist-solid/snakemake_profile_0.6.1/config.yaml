@@ -1,3 +1,4 @@
+keep-going: true
 use-singularity: true
 singularity-prefix: /storage/userdata/singularity_cache
 singularity-args: --bind /storage --bind $HOME
