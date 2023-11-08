@@ -1,5 +1,8 @@
 # config/ points to the config in the Twist Solid repository
 # config_0.8.0/ points to the local config
+
+resources: config_0.8.0/resources.yaml
+
 reference:
   background: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/Background/background_panel_nextseq_noUmea_27_dp500_af015.tsv"
   artifacts: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/Artifact/artifact_panel_nextseq_36.tsv"

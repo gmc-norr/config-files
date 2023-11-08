@@ -1,0 +1,23 @@
+jobs: 500
+keep-going: true
+restart-times: 2
+rerun-incomplete: true
+show-failed-logs: true
+
+use-conda: false
+use-singularity: true
+singularity-prefix: /storage/userdata/singularity_cache
+singularity-args: --bind /storage --bind /scale --bind $HOME --bind /scratch --bind /tmp
+
+cluster: sbatch --parsable --time={resources.time} --cpus-per-task={resources.threads} --mem-per-cpu={resources.mem_per_cpu} --partition={resources.partition} --nodelist=${{SLURM_JOB_NODELIST:-vs1513,vs1514}} --job-name=twist-solid.{rule} --output=slurm_logs/{rule}_%j.out
+cluster-status: slurm-status.py
+cluster-cancel: scancel
+
+configfiles:
+  - config/config.yaml
+  - config_0.8.0/config.yaml
+
+# groups: >-
+#   snv_indels_bed_split=group1
+# group-components: >-
+#   group1=5
