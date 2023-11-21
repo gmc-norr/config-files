@@ -26,9 +26,6 @@ cnv_html_report:
 cnvkit_batch:
   normal_reference: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/ringtrial_normals/cnvkit.PoN.cnn"
 
-filter_vcf:
-  germline: config_dev/config_hard_filter_germline.yaml
-
 gatk_collect_allelic_counts:
   SNP_interval: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/gnomad_SNP_0.001_target.annotated.interval_list"
 
