@@ -9,7 +9,7 @@ use-singularity: true
 singularity-prefix: /storage/userdata/singularity_cache
 singularity-args: --bind /storage --bind /scale --bind $HOME --bind /scratch --bind /tmp
 
-cluster: sbatch --parsable --time={resources.time} --cpus-per-task={resources.threads} --mem-per-cpu={resources.mem_per_cpu} --partition={resources.partition} --nodelist=${{SLURM_JOB_NODELIST:-vs1513,vs1514}} --job-name=twist-solid.{rule} --output=slurm_logs/{rule}_%j.out
+cluster: sbatch --parsable --time={resources.time} --cpus-per-task={resources.threads} --mem-per-cpu={resources.mem_per_cpu} --partition={resources.partition} --nodelist=${{SLURM_JOB_NODELIST:-vs1513,vs1514}} --job-name=poppy.{rule} --output=slurm_logs/{rule}_%j.out
 cluster-status: slurm-status.py
 cluster-cancel: scancel
 
