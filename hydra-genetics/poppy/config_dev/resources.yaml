@@ -1,0 +1,22 @@
+---
+
+default_resources:
+  threads: 1
+  time: "4:00:00"
+  mem_mb: 4096
+  mem_per_cpu: 4096
+  partition: run
+
+bwa_mem:
+  time: "24:00:00"
+  threads: 15
+  mem_mb: 61440
+
+fastp_pe:
+  threads: 5
+  mem_mb: 20480
+
+fastqc:
+  time: "2:00:00"
+  threads: 8
+  mem_mb: 32768

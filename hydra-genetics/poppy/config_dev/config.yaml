@@ -1,0 +1,47 @@
+---
+
+resources: "config_dev/resources.yaml"
+samples: "samples.tsv"
+units: "units.tsv"
+
+reference:
+  fasta: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.fasta"
+  fai: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.fai"
+  dict: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.dict"
+  design_bed: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/bed/Twist_myeloid_v.1.1_padd6_201126.sorted.bed"
+  design_intervals: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/bed/Twist_myeloid_v.1.1_padd6_201126.sorted.intervals"
+  design_intervals_gatk_cnv: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/ringtrial_normals/design.preprocessed.interval_list"
+
+bwa_mem:
+  amb: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.amb"
+  ann: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.ann"
+  bwt: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.bwt"
+  pac: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.pac"
+  sa: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.sa"
+  container: "docker://hydragenetics/bwa_mem:0.7.17"
+
+cnv_html_report:
+  template_dir: "config_dev/cnv_report_template"
+
+cnvkit_batch:
+  normal_reference: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/ringtrial_normals/cnvkit.PoN.cnn"
+
+gatk_collect_allelic_counts:
+  SNP_interval: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/gnomad_SNP_0.001_target.annotated.interval_list"
+
+gatk_denoise_read_counts:
+  normal_reference: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/ringtrial_normals/gatk.PoN.hdf5"
+
+multiqc:
+  config: "config_dev/multiqc.yaml"
+
+pindel_call:
+  include_bed: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/bed/pindel_shortlist.bed"
+
+svdb_query:
+  db_string: "--db /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/ringtrial_normals/svdb_cnv.vcf"
+
+vep:
+  container: docker://hydragenetics/vep:105
+  extra: --assembly GRCh37 --check_existing --pick --variant_class --everything
+  vep_cache: "/storage/userdata/references/homo_sapiens/vep/vep_data_105"
