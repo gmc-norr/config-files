@@ -1,0 +1,147 @@
+# config/ points to the config in the Twist Solid repository
+# config_0.9.0/ points to the local config
+
+resources: config_0.9.0/resources.yaml
+
+reference:
+  background: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/Background/background_panel_nextseq_noUmea_27_dp500_af015.tsv"
+  artifacts: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/Artifact/artifact_panel_nextseq_36.tsv"
+  fasta: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.fasta"
+  fasta_rna: "/storage/userdata/references/homo_sapiens/hg19/index/star-fusion/GRCh37_gencode_v19_CTAT_lib_Mar012021.plug-n-play/ctat_genome_lib_build_dir/ref_genome.fa"
+  dict: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.dict"
+  fai: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.fai"
+  design_bed: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/pool1_pool2.sort.merged.padded20.cnv200.hg19.split_fusion_genes.210608.bed"
+  design_intervals: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/pool1_pool2_nochr_3c.sort.merged.padded20.cnv400.hg19.210311.met.annotated.Exon_only.interval_list"
+  design_intervals_gatk_cnv: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/pool1_pool2_nochr_3c.sort.merged.padded20.cnv400.hg19.210311.met.annotated.bed.preprocessed.interval_list"
+  design_bed_rna: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-rna/bed/Twist_RNA_Design5.annotated.bed"
+  design_intervals_rna: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-rna/bed/Twist_RNA_Design5.annotated.interval_list"
+
+arriba:
+  assembly: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.fasta"
+
+annotate_cnv:
+  cnv_amp_genes: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnv_amp_genes.bed"
+  cnv_loh_genes_validated: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnv_loh_uppsala_genes.bed"
+  cnv_loh_genes_all: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnv_loh_genes.bed"
+
+bcftools_annotate:
+  annotation_db: "/storage/userdata/references/homo_sapiens/hg19/gnomad/small_exac_common_3.hg19.vcf.gz"
+
+bcftools_filter_include_region:
+  exon: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/pool1_pool2.sort.merged.padded20.cnv200.hg19.split_fusion_genes.MUC6_31_rm.exon_only.210608.bed"
+
+bcftools_filter_exclude_region:
+  blacklist: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnvkit_germline_blacklist_20221221.bed2"
+
+bcftools_id_snps:
+  snps_bed: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/ID_SNPs.bed"
+
+bwa_mem:
+  amb: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.amb"
+  ann: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.ann"
+  bwt: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.bwt"
+  pac: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.pac"
+  sa: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.sa"
+
+call_small_cnv_deletions:
+  regions_file: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnv_deletion_genes.tsv"
+
+call_small_cnv_amplifications:
+  regions_file: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnv_amplification_genes.tsv"
+
+cnv_html_report:
+  cytobands: true
+  show_table: true
+  template_dir: "config_0.9.0/cnv_report_template"
+
+cnvkit_batch:
+  normal_reference: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/PoN/cnvkit_nextseq_36.cnn"
+
+cnvkit_batch_hrd:
+  normal_reference_hrd: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/PoN/cnvkit_nextseq_27_HRD.cnn"
+
+exon_skipping:
+  design_bed: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-rna/bed/Twist_RNA_Design5.annotated.bed"
+
+filter_fuseq_wes:
+  gene_white_list: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/fuseq_wes/fuseq_wes_gene_white_list.txt"
+  transcript_black_list: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/fuseq_wes/fuseq_wes_transcript_black_list.txt"
+  gtf: "/storage/userdata/references/homo_sapiens/hg19/gtf/hg19.refGene.gtf"
+
+fuseq_wes:
+  ref_json: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/fuseq_wes/UCSC_hg19_wes_contigSize3000_bigLen130000_r100.json"
+  gtfSqlite: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/fuseq_wes/UCSC_hg19_wes_contigSize3000_bigLen130000_r100.sqlite"
+  fusiondb: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/fuseq_wes/Mitelman_fusiondb.RData"
+  paralogdb: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/fuseq_wes/ensmbl_paralogs_grch37.RData"
+  params: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/fuseq_wes/fuseq_params.txt"
+
+fusioncatcher:
+  genome_path: "/storage/userdata/references/homo_sapiens/hg19/index/fusioncatcher/human_v102"
+
+gatk_collect_allelic_counts:
+  SNP_interval: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/gnomad_SNP_0.001_target.annotated.interval_list"
+
+gatk_denoise_read_counts:
+  normal_reference: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/PoN/gatk_cnv_nextseq_36.hdf5"
+
+gatk_get_pileup_summaries:
+  sites: "/storage/userdata/references/homo_sapiens/hg19/gnomad/small_exac_common_3.hg19.vcf.gz"
+  variants: "/storage/userdata/references/homo_sapiens/hg19/gnomad/small_exac_common_3.hg19.vcf.gz"
+
+gene_fuse:
+  genes: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/genefuse/GMS560_fusion_w_pool2.hg19.csv"
+  fasta: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.fasta"
+
+hotspot_annotation:
+  hotspots: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/Hotspots_combined_regions_nodups.csv"
+
+hotspot_info:
+  hotspot_mutations: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/Hotspots_combined_regions_nodups.csv"
+
+hotspot_report:
+  hotspot_mutations: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/Hotspots_combined_regions_nodups.csv"
+
+manta_config_t:
+  extra: "--exome --callRegions /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/pool1_pool2.sort.merged.padded20.cnv200.hg19.split_fusion_genes.210608.bed.gz"
+
+merge_cnv_json:
+  cytobands: "config_0.9.0/cytoBand.hg19.txt"
+  annotations:
+    - "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnv_amp_genes.bed"
+    - "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/bed/cnv_loh_genes.bed"
+
+msisensor_pro:
+  PoN: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/PoN/Msisensor_pro_reference_nextseq_36.list_baseline"
+
+purecn:
+  extra: "--model betabin --mapping-bias-file /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/purecn/mapping_bias_nextseq_27_hg19.rds"
+  normaldb: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/purecn/normalDB_nextseq_27_hg19.rds"
+  intervals: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/purecn/targets_twist-gms-st_hg19_25000_intervals.txt"
+
+purecn_coverage:
+  intervals: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/purecn/targets_twist-gms-st_hg19_25000_intervals.txt"
+
+report_fusions:
+  annotation_bed: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-rna/bed/Twist_RNA_fusionpartners.bed"
+
+report_gene_fuse:
+  filter_fusions: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/genefuse/filter_fusions_20230214.csv"
+
+star:
+  genome_index: "/data/ref_data/star/v2.7.10a_hg19/"
+  extra: "--quantMode GeneCounts --sjdbGTFfile /storage/userdata/references/homo_sapiens/hg19/gtf/hg19.refGene.gtf --outSAMtype BAM SortedByCoordinate --chimSegmentMin 10 --chimOutType WithinBAM SoftClip --chimJunctionOverhangMin 10 --chimScoreMin 1 --chimScoreDropMax 30 --chimScoreJunctionNonGTAG 0 --chimScoreSeparation 1 --alignSJstitchMismatchNmax 5 -1 5 5 --chimSegmentReadGapMax 3"
+
+star_fusion:
+  genome_path: "/storage/userdata/references/homo_sapiens/hg19/index/star-fusion/GRCh37_gencode_v19_CTAT_lib_Mar012021.plug-n-play/ctat_genome_lib_build_dir"
+
+svdb_query:
+  db_string: "--db /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/svdb/all_TN_292_svdb_0.8_20220505.vcf --out_frq Twist_AF --out_occ Twist_OCC"
+
+tmb:
+  filter_genes: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/tmb/tmb_filter_genes.txt"
+
+tmb_umi:
+  filter_genes: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid-dna/tmb/tmb_filter_genes.txt"
+
+vep:
+  vep_cache:  "/storage/userdata/references/homo_sapiens/vep/vep_data_105"
