@@ -94,3 +94,8 @@ groups:
   - tmb=snv_indels_bgzip
   - tmb=biomarker_tmb
   - tmb=_copy_tmb
+  
+  - bed_split=snv_indels_bed_split
+
+group-components:
+	- bed_split=50
