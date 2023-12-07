@@ -18,84 +18,84 @@ configfiles:
   - config_0.9.0/config.yaml
 
 groups:
-  - fuseq_wes=fusions_fuseq_wes
-  - fuseq_wes=fusions_filter_report_fuseq_wes
-  - fuseq_wes=_copy_fuseq_wes
+  - fusions_fuseq_wes=fuseq_wes
+  - fusions_filter_report_fuseq_wes=fuseq_wes
+  - _copy_fuseq_wes=fuseq_wes
 
-  - manta=cnv_sv_manta_config_t
-  - manta=cnv_sv_manta_run_workflow_t
-  - manta=_copy_manta_vcf
+  - cnv_sv_manta_config_t=manta
+  - cnv_sv_manta_run_workflow_t=manta
+  - _copy_manta_vcf=manta
 
   - cnv_tsv_report=cnv_tsv_report
-  - cnv_tsv_report=_copy_cnv_tsv_report_validated_pathology_purecn
-  - cnv_tsv_report=_copy_cnv_tsv_report_purecn
-  - cnv_tsv_report=_copy_cnv_tsv_report_validated_purecn
-  - cnv_tsv_report=_copy_cnv_tsv_report_pathology_purecn
-  - cnv_tsv_report=_copy_cnv_tsv_report_pathology
-  - cnv_tsv_report=_copy_cnv_tsv_report_validated_pathology
+  - _copy_cnv_tsv_report_validated_pathology_purecn=cnv_tsv_report
+  - _copy_cnv_tsv_report_purecn=cnv_tsv_report
+  - _copy_cnv_tsv_report_validated_purecn=cnv_tsv_report
+  - _copy_cnv_tsv_report_pathology_purecn=cnv_tsv_report
+  - _copy_cnv_tsv_report_pathology=cnv_tsv_report
+  - _copy_cnv_tsv_report_validated_pathology=cnv_tsv_report
 
-  - hrd=biomarker_fix_scarhd_output
-  - hrd=_copy_hrd_score_pathology_purecn
-  - hrd=_copy_hrd_score_purecn
-  - hrd=_copy_hrd_score_pathology
+  - biomarker_fix_scarhd_output=hrd
+  - _copy_hrd_score_pathology_purecn=hrd
+  - _copy_hrd_score_purecn=hrd
+  - _copy_hrd_score_pathology=hrd
 
-  - purecn=cnv_sv_purecn
-  - purecn=cnv_sv_purecn_copy_output
-  - purecn=cnv_sv_purecn_purity_file
+  - cnv_sv_purecn=purecn
+  - cnv_sv_purecn_copy_output=purecn
+  - cnv_sv_purecn_purity_file=purecn
 
-  - multiqc=qc_multiqc
-  - multiqc=_copy_multiqc_dna_html
+  - qc_multiqc=multiqc
+  - _copy_multiqc_dna_html=multiqc
 
-  - gatk1=qc_gatk_get_pileup_summaries
-  - gatk1=qc_gatk_calculate_contamination
-  - gatk1=_copy_contamination_table
+  - qc_gatk_get_pileup_summaries=gatk1
+  - qc_gatk_calculate_contamination=gatk1
+  - _copy_contamination_table=gatk1
 
-  - svdb_query=cnv_sv_svdb_query
-  - svdb_query=_copy_svdb_query_pathology
-  - svdb_query=_copy_svdb_query_pathology_purecn
-  - svdb_query=_copy_svdb_query_purecn
+  - cnv_sv_svdb_query=svdb_query
+  - _copy_svdb_query_pathology=svdb_query
+  - _copy_svdb_query_pathology_purecn=svdb_query
+  - _copy_svdb_query_purecn=svdb_query
 
-  - gatk2=cnv_sv_gatk_collect_read_counts
-  - gatk2=cnv_sv_gatk_denoise_read_counts
-  - gatk2=cnv_sv_gatk_model_segments
-  - gatk2=call_small_cnv_deletions
-  - gatk2=_copy_small_cnv_deletions
-  - gatk2=call_small_cnv_amplifications
-  - gatk2=_copy_small_cnv_amplifications
+  - cnv_sv_gatk_collect_read_counts=gatk2
+  - cnv_sv_gatk_denoise_read_counts=gatk2
+  - cnv_sv_gatk_model_segments=gatk2
+  - call_small_cnv_deletions=gatk2
+  - _copy_small_cnv_deletions=gatk2
+  - call_small_cnv_amplifications=gatk2
+  - _copy_small_cnv_amplifications=gatk2
 
-  - gatk3=snv_indels_gatk_mutect2
-  - gatk3=snv_indels_gatk_mutect2_merge_stats
+  - snv_indels_gatk_mutect2=gatk3
+  - snv_indels_gatk_mutect2_merge_stats=gatk3
 
-  - annot1=annotation_vep
-  - annot1=fix_vcf_ad_for_qci
-  - annot1=_copy_qci_vcf
-  - annot1=_copy_codon_snv_vcf
+  - annotation_vep=annot1
+  - fix_vcf_ad_for_qci=annot1
+  - _copy_qci_vcf=annot1
+  - _copy_codon_snv_vcf=annot1
 
-  - annot2=annotation_artifact_annotation
-  - annot2=annotation_hotspot_annotation
-  - annot2=annotation_background_annotation
+  - annotation_artifact_annotation=annot2
+  - annotation_hotspot_annotation=annot2
+  - annotation_background_annotation=annot2
 
-  - filtering1=filtering_bcftools_filter_include_region
-  - filtering1=filtering_filter_vcf
-  - filtering1=annotation_add_multi_snv_in_codon
-  - filtering1=_copy_exononly_hardfiltered_vcf
-  - filtering1=_copy_exononly_softfiltered_vcf
+  - filtering_bcftools_filter_include_region=filtering1
+  - filtering_filter_vcf=filtering1
+  - annotation_add_multi_snv_in_codon=filtering1
+  - _copy_exononly_hardfiltered_vcf=filtering1
+  - _copy_exononly_softfiltered_vcf=filtering1
 
-  - reports1=reports_cnv_json
-  - reports1=reports_merge_cnv_json
-  - reports1=reports_cnv_html_report
-  - reports1=_copy_cnv_html_report_pathology_purecn
-  - reports1=_copy_cnv_html_report_pathology
-  - reports1=_copy_cnv_html_report_purecn
+  - reports_cnv_json=reports1
+  - reports_merge_cnv_json=reports1
+  - reports_cnv_html_report=reports1
+  - _copy_cnv_html_report_pathology_purecn=reports1
+  - _copy_cnv_html_report_pathology=reports1
+  - _copy_cnv_html_report_purecn=reports1
 
-  - hotspots=hotspot_report
-  - hotspots=_copy_hotspot_tsv
+  - hotspot_report=hotspots
+  - _copy_hotspot_tsv=hotspots
 
-  - tmb=snv_indels_bgzip
-  - tmb=biomarker_tmb
-  - tmb=_copy_tmb
+  - snv_indels_bgzip=tmb
+  - biomarker_tmb=tmb
+  - _copy_tmb=tmb
   
-  - bed_split=snv_indels_bed_split
+  - snv_indels_bed_split=bed_split
 
 group-components:
-	- bed_split=50
+  - bed_split=50
