@@ -20,9 +20,6 @@ bwa_mem:
   sa: "/storage/userdata/references/homo_sapiens/hg19/index/bwa/BWA_0.7.10_refseq/hg19.with.mt.sa"
   container: "docker://hydragenetics/bwa_mem:0.7.17"
 
-cnv_html_report:
-  template_dir: "config_dev/cnv_report_template"
-
 cnvkit_batch:
   normal_reference: "/storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-hematology-dna/ringtrial_normals/cnvkit.PoN.cnn"
 
