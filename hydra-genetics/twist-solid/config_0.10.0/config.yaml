@@ -1,0 +1,12 @@
+# config/ points to the config in the Twist Solid repository
+# config_0.10.0/ points to the local config
+
+resources: config_0.10.0/resources.yaml
+
+cnv_html_report:
+  cytobands: true
+  show_table: true
+  template_dir: config_0.10.0/cnv_report_template
+
+merge_cnv_json:
+  cytobands: config_0.10.0/cytoBand.hg19.txt
