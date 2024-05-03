@@ -42,17 +42,15 @@ def get_job_state(job_id):
 
 
 def get_job_status(state):
-    match state:
-        case "CONFIGURING" | "COMPLETING" | "PENDING" | "RUNNING" | "SUSPENDED":
-            return "running"
-        case "COMPLETED":
-            return "success"
-        case "BOOT_FAIL" | "DEADLINE" | "FAILED" | "NODE_FAIL" | "OUT_OF_MEMORY" | "PREEMPTED" | "TIMEOUT":
-            return "failed"
-        case s if s.startswith("CANCELLED"):
-            return "failed"
-        case default:
-            return "running"
+    if state in ("CONFIGURING", "COMPLETING", "PENDING", "RUNNING", "SUSPENDED"):
+        return "running"
+    if state == "COMPLETED":
+        return "success"
+    if state in ("BOOT_FAIL", "DEADLINE", "FAILED", "NODE_FAIL", "OUT_OF_MEMORY", "PREEMPTED", "TIMEOUT"):
+        return "failed"
+    if state.startswith("CANCELLED"):
+        return "failed"
+    return "running"
 
 
 if __name__ == '__main__':
