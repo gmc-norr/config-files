@@ -1,6 +1,6 @@
 # These resource specifications have been optimised for running on the NGS Slurm setup at GMC North
 default_resources:
-  partition: run
+  partition: clinical
   time: "4:00:00"
   threads: 1
   ntasks: 1
