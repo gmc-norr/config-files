@@ -3,7 +3,7 @@ snakefile: /storage/userdata/pipelines/Twist_Solid/0.13.0/workflow/Snakefile
 configfiles:
   - /storage/userdata/pipelines/Twist_Solid/0.13.0/config/config.yaml
   - /storage/userdata/pipelines/Twist_Solid/0.13.0/config/config.data.hg19.yaml
-  - /storage/userdata/pipelines/config-files/hydra-genetics/twist-solid/config_0.13.0/config.yaml
+  - /storage/userdata/pipelines/config-files/hydra-genetics/twist-solid/0.13.0/configs/config.yaml
 
 config:
   - resources=/storage/userdata/pipelines/config-files/hydra-genetics/twist-solid/0.13.0/configs/resources_research.yaml
