@@ -18,7 +18,7 @@ show-failed-logs: true
 use-conda: false
 use-singularity: true
 singularity-prefix: /storage/userdata/snakemake_singularity_cache
-singularity-args: --bind /storage --bind /scale --bind $HOME --bind /scratch --bind /tmp
+singularity-args: --bind /storage --bind /scale --bind $HOME --bind /scratch --bind /tmp --cleanenv
 
 cluster: sbatch --parsable --time={resources.time} --cpus-per-task={resources.threads} --mem-per-cpu={resources.mem_per_cpu} --partition={resources.partition} --nodelist=${{SLURM_JOB_NODELIST:-vs1513,vs1514}} --job-name=twist-solid.{rule} --output=slurm_logs/{rule}_%j.out
 cluster-status: slurm-status.py
