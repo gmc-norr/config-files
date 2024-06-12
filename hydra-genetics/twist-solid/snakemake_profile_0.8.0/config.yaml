@@ -1,8 +1,0 @@
-keep-going: true
-use-singularity: true
-singularity-prefix: /storage/userdata/singularity_cache
-singularity-args: --bind /storage --bind $HOME --bind /scale
-configfiles:
-  - config/config.yaml
-  - config_0.8.0/config.yaml
-cores: 15
