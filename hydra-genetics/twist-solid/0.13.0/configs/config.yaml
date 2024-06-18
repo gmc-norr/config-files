@@ -1,14 +1,10 @@
-# config/ points to the config in the Twist Solid repository
-# config_0.13.0/ points to the local config
-
 PROJECT_DESIGN_DATA: /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid
 PROJECT_PON_DATA: /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid
 PROJECT_REF_DATA: /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid
 
-TWIST_SOLID_CONFIG: /storage/userdata/pipelines/config-files/hydra-genetics/twist-solid/config_0.13.0
+TWIST_SOLID_CONFIG: /storage/userdata/pipelines/config-files/hydra-genetics/twist-solid/0.13.0/configs
 TWIST_SOLID_HOME: /storage/userdata/pipelines/Twist_Solid/0.13.0
 
-resources: "{{TWIST_SOLID_CONFIG}}/resources.yaml"
 output: "{{TWIST_SOLID_HOME}}/config/output_files.yaml"
 
 filter_vcf:
