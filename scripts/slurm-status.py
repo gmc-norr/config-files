@@ -11,7 +11,7 @@ LOG = logging.getLogger(__name__)
 
 
 def get_job_state(job_id):
-    res = ""
+    res = {}
     for i in range(RETRIES):
         try:
             sacct_res = subprocess.check_output(["sacct", "-Pbnj", job_id])
@@ -27,6 +27,14 @@ def get_job_state(job_id):
         try:
             scontrol_res = subprocess.check_output(["scontrol", "-o", "show", "job", job_id])
             m = re.search(r"JobState=(\w+)", scontrol_res.decode())
+            if m is None:
+                LOG.error("failed to parse scontrol output")
+                if i >= RETRIES - 1:
+                    print("failed")
+                    sys.exit(0)
+                else:
+                    time.sleep(1)
+                    continue
             res = {job_id: m.group(1)}
             break
         except subprocess.CalledProcessError as cpe:
