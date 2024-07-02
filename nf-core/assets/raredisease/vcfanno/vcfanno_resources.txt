@@ -1,0 +1,1 @@
+/storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/grch38_gnomad_4.vcf.gz

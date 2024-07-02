@@ -1,0 +1,7 @@
+title = "vcfanno configuration file for GRCh38"
+
+[[annotation]]
+    file = "grch38_gnomad_4.vcf.gz"
+    fields = ["AF", "AF_popmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
