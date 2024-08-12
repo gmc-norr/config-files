@@ -1,1 +1,8 @@
 vep_files
+/storage/userdata/references/vep/plugin_data/GRCh38/LoFtool/LoFtool_scores.txt
+/storage/userdata/references/vep/plugin_data/GRCh38/pLI/pLI_values.txt
+/storage/userdata/references/vep/plugin_data/GRCh38/spliceai_1.3/spliceai_scores.raw.snv.hg38.vcf.gz
+/storage/userdata/references/vep/plugin_data/GRCh38/spliceai_1.3/spliceai_scores.raw.snv.hg38.vcf.gz.tbi
+/storage/userdata/references/vep/plugin_data/GRCh38/spliceai_1.3/spliceai_scores.raw.indel.hg38.vcf.gz
+/storage/userdata/references/vep/plugin_data/GRCh38/spliceai_1.3/spliceai_scores.raw.indel.hg38.vcf.gz.tbi
+/storage/userdata/references/vep/plugin_data/GRCh38/MaxEntScan
