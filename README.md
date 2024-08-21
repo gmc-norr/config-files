@@ -4,17 +4,17 @@ Inspired by [Clinical-Genomics/reference-files](https://github.com/Clinical-Geno
 
 ## nf-core/raredisease
 
-To run the raredisease pipeline in a clinical setting on our cluster, run the following command:
+To run the raredisease pipeline in a clinical setting on our cluster, run the following commands:
 
 ```bash
+ln -s ${GMCNORR_CONFIG_FILES}/nf-core/run-configs/raredisease.config nextflow.config
 nextflow run nf-core/raredisease \
-    --custom_config_base ${CONFIG_FILES}/nf-core \
+    --custom_config_base ${GMCNORR_CONFIG_FILES}/nf-core \
     -profile rv,clinical \
-    --analysis_type wgs \
-    --input samplesheet.csv
+    --analysis_type wgs
 ```
 
-`$CONFIG_FILES` is the path to the clone of this repo. The `rv` (Region Västerbotten) profile is the general cluster config for nf-core and should be used for all nf-core pipelines. For this config there are also two additional profiles: `clinical` and `research`. These are also general, and will decide what priority the jobs will get on the cluster.
+`$GMCNORR_CONFIG_FILES` is the path to the clone of this repo. The `rv` (Region Västerbotten) profile is the general cluster config for nf-core and should be used for all nf-core pipelines. For this config there are also two additional profiles: `clinical` and `research`. These are also general, and will decide what priority the jobs will get on the cluster.
 
 There are three types of analyses that can be run: `wgs` (whole genome), `wes` (whole exome) and `mito` (mitochondrial), and this is set with `--analysis_type`. This will partly decide what software to use and what resources they will need.
 
