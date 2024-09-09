@@ -1,0 +1,34 @@
+PROJECT_DESIGN_DATA: /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid
+PROJECT_PON_DATA: /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid
+PROJECT_REF_DATA: /storage/userdata/references/homo_sapiens/hg19/hydra-genetics/twist-solid
+
+TWIST_SOLID_CONFIG: /storage/userdata/pipelines/config-files/hydra-genetics/twist-solid/0.14.0/configs
+TWIST_SOLID_HOME: /storage/userdata/pipelines/Twist_Solid/0.14.0
+
+output: "{{TWIST_SOLID_HOME}}/config/output_files.yaml"
+
+filter_vcf:
+  snv_soft_filter: "{{TWIST_SOLID_HOME}}/config/filters/config_soft_filter_uppsala_vep105.yaml"
+  snv_soft_filter_umi: "{{TWIST_SOLID_HOME}}/config/filters/config_soft_filter_umi_vep105.yaml"
+  snv_hard_filter: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_uppsala_vep105.yaml"
+  snv_hard_filter_umi: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_umi_vep105.yaml"
+  snv_hard_filter_purecn: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_purecn.yaml"
+  cnv_hard_filter_amp: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_cnv_amp.yaml"
+  cnv_hard_filter_loh: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_cnv_loh.yaml"
+  germline: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_germline_vep105.yaml"
+
+hotspot_annotation:
+  chr_translation_file: "{{TWIST_SOLID_HOME}}/config/reports/hotspot_report.chr.translation.hg19"
+
+hotspot_report:
+  chr_translation_file: "{{TWIST_SOLID_HOME}}/config/reports/hotspot_report.chr.translation.hg19"
+  report_config: "{{TWIST_SOLID_HOME}}/config/reports/hotspot_report.yaml"
+
+multiqc:
+  reports:
+    DNA:
+      config: "{{TWIST_SOLID_HOME}}/config/reports/multiqc_config_dna.yaml"
+    DNA_umi:
+      config: "{{TWIST_SOLID_HOME}}/config/reports/multiqc_config_dna.yaml"
+    RNA:
+      config: "{{TWIST_SOLID_HOME}}/config/reports/multiqc_config_rna.yaml"
