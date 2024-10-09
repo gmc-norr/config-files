@@ -1,0 +1,31 @@
+# Input/output
+input: samplesheet.csv
+outdir: raredisease_results
+
+# Type of data
+platform: illumina
+analysis_type: wgs
+
+# References
+igenomes_base: /storage/userdata/references/igenomes
+genome: GRCh38
+
+# Software
+aligner: bwamem2
+variant_caller: deepvariant
+
+# Annotation
+vep_cache: /storage/userdata/references/vep
+vep_cache_version: 110
+gnomad_af: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.af.tab.gz
+
+# Skip some things for now since we don't have normal panels or other
+# info needed for these steps.
+skip_germlinecnvcaller: true
+skip_sv_annotation: true
+skip_me_calling: true
+skip_me_annotation: true
+skip_mt_annotation: true
+
+# VEP filtering is broken, so skip it for now until VEP 113 has been released
+skip_vep_filter: true
