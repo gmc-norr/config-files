@@ -1,0 +1,163 @@
+title = "vcfanno configuration file for GRCh38"
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr1.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr2.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr3.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr4.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr5.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr6.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr7.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr8.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr9.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr10.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr11.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr12.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr13.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr14.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr15.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr16.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr17.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr18.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr19.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr20.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr21.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chr22.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chrX.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v4.1.sites.chrY.vcf.bgz"
+    fields = ["AF", "AF_grpmax"]
+    ops = ["self", "self"]
+    names = ["GNOMADAF", "GNOMADAF_popmax"]
+
+[[annotation]]
+    file = "gnomad.genomes.v3.1.sites.chrM.vcf.bgz"
+    fields = ["AF_hom", "AF_het", "mitotip_score", "mitotip_trna_prediction"]
+    ops = ["self", "self", "self", "self"]
+    names = ["GNOMAD_MTAF_hom", "GNOMAD_MTAF_het", "mitotip_score", "mitotip_trna_prediction"]
+
+[[annotation]]
+    file = "swegen_frequencies_fixploidy_GRCh38_20190204.vcf.gz"
+    fields = ["AF", "AC_Hom", "AC_Het", "AC_Hemi"]
+    ops = ["self", "self", "self", "self"]
+    names = ["SWEGENAF", "SWEGENAAC_Hom", "SWEGENAAC_Het", "SWEGENAAC_Hemi"]
+
+[[annotation]]
+    file = "whole_genome_SNVs.tsv.gz"
+    names = ["CADD"]
+    ops = ["mean"]
+    columns = [6]
