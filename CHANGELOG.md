@@ -2,6 +2,15 @@
 
 ## 0.1.0 (2024-10-11)
 
+First release of config-files.
+
+### Supported pipelines
+
+**Nextflow:**
+- nf-core/raredisease 2.2.0
+
+**hydra-genetics:**
+- genomic-medicine-sweden/Twist_Solid 0.13.0, 0.14.0
 
 ### Features
 
