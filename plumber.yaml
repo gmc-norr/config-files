@@ -1,0 +1,13 @@
+version: 1
+pipelines:
+  - name: nf-core/raredisease
+    engine: nextflow
+    version: "2.2.0"
+    profiles:
+      - ./nextflow/nf-core/rv.config
+    config_files:
+      - ./nextflow/nf-core/raredisease/raredisease.config
+    param_files:
+      - ./nextflow/nf-core/raredisease/params.yaml
+    assets:
+      - ./nextflow/nf-core/assets/raredisease
