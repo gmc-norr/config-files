@@ -11,7 +11,7 @@ pipelines:
       - ./nextflow/nf-core/raredisease/params.yaml
     assets:
       - ./nextflow/nf-core/assets/raredisease
-  - name: hydra-genetics/twist-solid
+  - name: genomic-medicine-sweden/Twist_Solid
     engine: snakemake
     version: "0.14.0"
     profiles:
