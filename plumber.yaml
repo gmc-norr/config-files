@@ -11,3 +11,17 @@ pipelines:
       - ./nextflow/nf-core/raredisease/params.yaml
     assets:
       - ./nextflow/nf-core/assets/raredisease
+  - name: hydra-genetics/twist-solid
+    engine: snakemake
+    version: "0.14.0"
+    profiles:
+      - ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_clinical
+      - ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_research
+    config_files:
+      - ./hydra-genetics/twist-solid/0.14.0/configs/config.yaml
+      - ./hydra-genetics/twist-solid/0.14.0/configs/resources_clinical.yaml
+      - ./hydra-genetics/twist-solid/0.14.0/configs/resources_research.yaml
+    param_files:
+      - ./nextflow/nf-core/raredisease/params.yaml
+    assets:
+      - ./nextflow/nf-core/assets/raredisease
