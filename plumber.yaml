@@ -11,6 +11,9 @@ pipelines:
       - ./nextflow/nf-core/raredisease/params.yaml
     assets:
       - ./nextflow/nf-core/assets/raredisease
+      - ./nextflow/nf-core/assets/GRCh38_chrY.interval_list
+      - ./nextflow/nf-core/assets/GRCh38_chr1-chr22chrXchrYchrM.interval_list
+      - ./nextflow/nf-core/assets/variant_consequences.txt
   - name: genomic-medicine-sweden/Twist_Solid
     engine: snakemake
     version: "0.14.0"
