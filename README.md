@@ -29,3 +29,14 @@ These are environment variables that are recommended (and in some cases required
 - `GMCNORR_CONFIG_HOME`: should point to a clone of this repo.
 - `NEXTFLOW_CONFIG_HOME`: should point to the `nextflow` directory in this repo.
 - `HYDRA_CONFIG_HOME`: should point to the `hydra-genetics` directory in this repo.
+
+## Plumber integration
+
+This repo is configured to work with [plumber](https://github.com/gmc-norr/plumber).
+In order to make a pipeline configuration available in plumber, it has to be added to the plumberfile `plumber.yaml`.
+See the [plumberfile schema](https://github.com/gmc-norr/plumber/blob/main/schema/plumberfile-v1.schema.json) for more information.
+It is also possible to use plumber to validate the plumberfile.
+
+Due to plumber rearranging the config files to some extent, it needs to be able to control file paths in any config files that refer to files within this repo.
+This can be seen in action in the [config for nf-core/raredisease](./nextflow/nf-core/raredisease/raredisease.config).
+Since this approach has yet to be extensively tested, it might be subject to change.
