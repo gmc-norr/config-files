@@ -34,7 +34,7 @@ These are environment variables that are recommended (and in some cases required
 
 This repo is configured to work with [plumber](https://github.com/gmc-norr/plumber).
 In order to make a pipeline configuration available in plumber, it has to be added to the plumberfile `plumber.yaml`.
-See the [plumberfile schema](https://github.com/gmc-norr/plumber/blob/main/schema/plumberfile-v1.schema.json) for more information.
+See the [plumberfile schema](https://github.com/gmc-norr/plumber/blob/main/schema/plumber-v1.schema.json) for more information.
 It is also possible to use plumber to validate the plumberfile.
 
 Due to plumber rearranging the config files to some extent, it needs to be able to control file paths in any config files that refer to files within this repo.
