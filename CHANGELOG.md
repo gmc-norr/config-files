@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/gmc-norr/config-files/compare/v0.1.0...v0.2.0) (2025-02-17)
+
+
+### Features
+
+* add plumberfile ([#19](https://github.com/gmc-norr/config-files/issues/19)) ([90c6b0a](https://github.com/gmc-norr/config-files/commit/90c6b0adedd9331e6cd9c8dbfd39916a895baada))
+
+
+### Bug Fixes
+
+* **hydra-genetics:** don't specify nodelist, rely on partition instead ([#22](https://github.com/gmc-norr/config-files/issues/22)) ([45ca959](https://github.com/gmc-norr/config-files/commit/45ca9593d2eea446753a2b9885c57a86b23679e1))
+
 ## 0.1.0 (2024-10-11)
 
 First release of config-files.
