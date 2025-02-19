@@ -16,7 +16,7 @@ variant_caller: deepvariant
 
 # Annotation
 vep_cache: /storage/userdata/references/vep
-vep_cache_version: 110
+vep_cache_version: 113
 gnomad_af: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.af.tab.gz
 
 # Skip some things for now since we don't have normal panels or other
@@ -26,6 +26,3 @@ skip_sv_annotation: true
 skip_me_calling: true
 skip_me_annotation: true
 skip_mt_annotation: true
-
-# VEP filtering is broken, so skip it for now until VEP 113 has been released
-skip_vep_filter: true
