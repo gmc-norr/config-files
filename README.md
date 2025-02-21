@@ -4,14 +4,16 @@ Inspired by [Clinical-Genomics/reference-files](https://github.com/Clinical-Geno
 
 ## nf-core/raredisease
 
-To run the raredisease pipeline in a clinical setting on our cluster, run the following commands:
+To run the raredisease pipeline in a clinical setting on our cluster, run the following command:
 
 ```bash
-nextflow run nf-core/raredisease \
+nextflow \
+    run \
     -c $NEXTFLOW_CONFIG_HOME/nf-core/raredisease/raredisease.config \
-    --params-file $NEXTFLOW_CONFIG_HOME/nf-core/raredisease/params.yaml \
-    -profile rv,clinical \
-    --analysis_type wgs
+    -c $NEXTFLOW_CONFIG_HOME/nf-core/rv.config \
+    -params-file $NEXTFLOW_CONFIG_HOME/nf-core/raredisease/params.yaml \
+    -profile clinical \
+    nf-core/raredisease
 ```
 
 `$NEXTFLOW_CONFIG_HOME` is the path to the `nextflow` directory in a clone of this repo. The `rv` (Region Västerbotten) profile is the general cluster config for nf-core and should be used for all nf-core pipelines. For this config there are also two additional profiles: `clinical` and `research`. These are also general, and will decide what priority the jobs will get on the cluster.
@@ -40,3 +42,11 @@ It is also possible to use plumber to validate the plumberfile.
 Due to plumber rearranging the config files to some extent, it needs to be able to control file paths in any config files that refer to files within this repo.
 This can be seen in action in the [config for nf-core/raredisease](./nextflow/nf-core/raredisease/raredisease.config).
 Since this approach has yet to be extensively tested, it might be subject to change.
+
+To run the same example that is presented at the beginning of this document, run the command:
+
+```bash
+plumber nextflow run -p clinical nf-core/raredisease
+```
+
+Configs and assets will be downloaded automatically, and the appropriate environment variables will be set.

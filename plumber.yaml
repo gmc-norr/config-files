@@ -2,7 +2,7 @@ version: 1
 pipelines:
   - name: nf-core/raredisease
     engine: nextflow
-    version: "2.2.0"
+    version: "2.3.0"
     profiles:
       - ./nextflow/nf-core/rv.config
     config_files:
