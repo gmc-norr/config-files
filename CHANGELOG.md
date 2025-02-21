@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/gmc-norr/config-files/compare/v0.2.0...v0.3.0) (2025-02-21)
+
+
+### Features
+
+* update nf-core/raredisease to 2.3.0 ([#23](https://github.com/gmc-norr/config-files/issues/23)) ([a2d3479](https://github.com/gmc-norr/config-files/commit/a2d34795fa7d6cef77f563f72a075933adc821ae))
+
 ## [0.2.0](https://github.com/gmc-norr/config-files/compare/v0.1.0...v0.2.0) (2025-02-17)
 
 
