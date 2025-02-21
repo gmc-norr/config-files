@@ -2,6 +2,15 @@
 
 ## [0.3.0](https://github.com/gmc-norr/config-files/compare/v0.2.0...v0.3.0) (2025-02-21)
 
+### Supported pipelines
+
+#### Nextflow:
+
+- nf-core/raredisease 2.3.0
+
+#### hydra-genetics:
+
+- genomic-medicine-sweden/Twist_Solid 0.13.0, 0.14.0
 
 ### Features
 
