@@ -34,8 +34,7 @@ pipelines:
       name: python
       version: "3.10"
     profiles:
-      - ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_clinical
-      - ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_research
+      - ./hydra-genetics/twist-solid/0.14.0/profiles/slurm
     config_files:
       - ./hydra-genetics/twist-solid/0.14.0/configs/config.yaml
       - ./hydra-genetics/twist-solid/0.14.0/configs/resources_clinical.yaml
