@@ -37,5 +37,4 @@ pipelines:
       - ./hydra-genetics/twist-solid/0.23.0/profiles/slurm
     config_files:
       - ./hydra-genetics/twist-solid/0.23.0/configs/config.yaml
-      - ./hydra-genetics/twist-solid/0.23.0/configs/resources_clinical.yaml
-      - ./hydra-genetics/twist-solid/0.23.0/configs/resources_research.yaml
+      - ./hydra-genetics/twist-solid/0.23.0/configs/resources.yaml
