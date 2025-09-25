@@ -19,8 +19,6 @@ hotspot_annotation:
 hotspot_report:
   chr_translation_file: "{{TWIST_SOLID_HOME}}/config/reports/hotspot_report.chr.translation.hg19"
   report_config: "{{TWIST_SOLID_HOME}}/config/reports/hotspot_report.yaml"
-  hotspot_mutations:
-    CRC: []
 
 merge_cnv_json:
   annotations:
