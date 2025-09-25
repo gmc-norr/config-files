@@ -13,6 +13,9 @@ filter_vcf:
   germline: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_germline_vep105.yaml"
   itd_hard_filter: "{{TWIST_SOLID_HOME}}/config/filters/config_hard_filter_scanitd.yaml"
 
+general_html_report:
+  multiqc_config: "{{TWIST_SOLID_HOME}}/config/reports/multiqc_config_dna.yaml"
+
 hotspot_annotation:
   chr_translation_file: "{{TWIST_SOLID_HOME}}/config/reports/hotspot_report.chr.translation.hg19"
 
