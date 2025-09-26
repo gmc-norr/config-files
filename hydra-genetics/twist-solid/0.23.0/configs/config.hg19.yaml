@@ -1,5 +1,5 @@
 output: "{{PLUMBER_PIPELINE_HOME}}/config/output_files.yaml"
-resources: "{{PLUMBER_PIPELINE_CONFIG}}/configs/resources.yaml"
+resources: "{{PLUMBER_PIPELINE_CONFIG}}/assets/resources.yaml"
 general_report: "{{PLUMBER_PIPELINE_HOME}}/config/reports/general_report.yaml"
 
 filter_vcf:

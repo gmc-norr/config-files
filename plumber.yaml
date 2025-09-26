@@ -51,6 +51,8 @@ pipelines:
     executor:
       name: python
       version: "3.10"
+    assets:
+        - ./hydra-genetics/twist-solid/0.23.0/configs/resources.yaml
     profiles:
       - name: slurm_hg19_clinical
         profile: ./hydra-genetics/twist-solid/0.23.0/profiles/slurm
@@ -59,7 +61,6 @@ pipelines:
           - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/config.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/resources.clinical.yaml
-          - ./hydra-genetics/twist-solid/0.23.0/configs/resources.yaml
       - name: slurm_hg19_research
         profile: ./hydra-genetics/twist-solid/0.23.0/profiles/slurm
         config_files:
@@ -67,4 +68,3 @@ pipelines:
           - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/config.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/resources.research.yaml
-          - ./hydra-genetics/twist-solid/0.23.0/configs/resources.yaml
