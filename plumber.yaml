@@ -39,7 +39,7 @@ pipelines:
           - ./hydra-genetics/twist-solid/0.14.0/configs/config.yaml
           - ./hydra-genetics/twist-solid/0.14.0/configs/resources_research.yaml
   - name: genomic-medicine-sweden/Twist_Solid
-    version: "0.23.0"
+    version: "v0.23.0"
     engine: snakemake
     environment:
       PLUMBER_REFERENCE_DATA: /storage/userdata/references/homo_sapiens/twist-solid
