@@ -24,6 +24,28 @@ A parameter that can be useful in case of failed or otherwise interrupted runs i
 
 The samplesheet used for the input data is *not* an Illumina samplesheet. See the [nf-core/raredisease documentation](https://nf-co.re/raredisease/2.2.0/docs/usage#samplesheet) for details.
 
+## genomic-medicine-sweden/Twist_Solid
+
+To run Twist Solid in a clinical setting, run the following command:
+
+```bash
+snakemake \
+    -s $PLUMBER_PIPELINE_HOME/workflow/Snakefile \
+    --profile $PLUMBER_PIPELINE_CONFIG/profiles/slurm \
+    --configfiles $PLUMBER_PIPELINE_HOME/config/config.yaml \
+        $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml \
+        $PLUMBER_CONFIG_HOME/configs/config.hg19.yaml \
+        $PLUMBER_CONFIG_HOME/configs/resources.clinical.yaml \
+    --config \
+        PROJECT_DESIGN_DATA=$PLUMBER_REFERENCE_DATA \
+        PROJECT_PON_DATA=$PLUMBER_REFERENCE_DATA \
+        PROJECT_REF_DATA=$PLUMBER_REFERENCE_DATA \
+        PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG \
+        PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+```
+
+See below for the definition of the different environment variables used. This assumes that the required files `samples.tsv` and `units.tsv` have already been generated and exist in the working directory.
+
 ## Environment variables
 
 These are environment variables that are recommended (and in some cases required):
@@ -31,6 +53,10 @@ These are environment variables that are recommended (and in some cases required
 - `GMCNORR_CONFIG_HOME`: should point to a clone of this repo.
 - `NEXTFLOW_CONFIG_HOME`: should point to the `nextflow` directory in this repo.
 - `HYDRA_CONFIG_HOME`: should point to the `hydra-genetics` directory in this repo.
+- `PLUMBER_PIPELINE_HOME`: should point to local path of the pipeline repo (is set when using plumber).
+- `PLUMBER_PIPELINE_CONFIG`: should point to the local path of the pipeline config (is set when using plumber). 
+- `PLUMBER_REFERENCE_DATA`: should point to the directory containing all required reference files required for the pipeline.
+- `PLUMBER_ASSETS_PATH`: should point to the assets directory of the local pipeline config.
 
 ## Plumber integration
 
