@@ -1,5 +1,5 @@
 output: "{{PLUMBER_PIPELINE_HOME}}/config/output_files.yaml"
-resources: "{{PLUMBER_PIPELINE_CONFIG}}/assets/resources.yaml"
+resources: "{{PLUMBER_PIPELINE_ASSETS}}/resources.yaml"
 
 filter_vcf:
   snv_soft_filter: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_soft_filter_uppsala_vep105.yaml"

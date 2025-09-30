@@ -29,6 +29,7 @@ pipelines:
         - PROJECT_REF_DATA=$PLUMBER_REFERENCE_DATA
         - PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG
         - PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+        - PLUMBER_PIPELINE_ASSETS=$PLUMBER_PIPELINE_ASSETS
     assets:
         - ./hydra-genetics/twist-solid/0.14.0/configs/resources.yaml
     profiles:
@@ -58,6 +59,7 @@ pipelines:
         - PROJECT_REF_DATA=$PLUMBER_REFERENCE_DATA
         - PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG
         - PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+        - PLUMBER_PIPELINE_ASSETS=$PLUMBER_PIPELINE_ASSETS
     executor:
       name: python
       version: "3.10"

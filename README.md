@@ -32,7 +32,8 @@ To run Twist Solid in a clinical setting, run the following command:
 snakemake \
     -s $PLUMBER_PIPELINE_HOME/workflow/Snakefile \
     --profile $PLUMBER_PIPELINE_CONFIG/profiles/slurm \
-    --configfiles $PLUMBER_PIPELINE_HOME/config/config.yaml \
+    --configfiles \
+        $PLUMBER_PIPELINE_HOME/config/config.yaml \
         $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml \
         $PLUMBER_CONFIG_HOME/configs/config.hg19.yaml \
         $PLUMBER_CONFIG_HOME/configs/resources.clinical.yaml \
@@ -41,10 +42,17 @@ snakemake \
         PROJECT_PON_DATA=$PLUMBER_REFERENCE_DATA \
         PROJECT_REF_DATA=$PLUMBER_REFERENCE_DATA \
         PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG \
-        PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+        PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME \
+        PLUMBER_PIPELINE_ASSETS=$PLUMBER_PIPELINE_ASSETS
 ```
 
 See below for the definition of the different environment variables used. This assumes that the required files `samples.tsv` and `units.tsv` have already been generated and exist in the working directory.
+
+The equivalent command using plumber would be:
+
+```bash
+plumber run hydra genomic-medicine-sweden/Twist_Solid --version v0.23.0 --profile slurm_hg19_clinical
+```
 
 ## Environment variables
 
@@ -56,7 +64,7 @@ These are environment variables that are recommended (and in some cases required
 - `PLUMBER_PIPELINE_HOME`: should point to local path of the pipeline repo (is set when using plumber).
 - `PLUMBER_PIPELINE_CONFIG`: should point to the local path of the pipeline config (is set when using plumber). 
 - `PLUMBER_REFERENCE_DATA`: should point to the directory containing all required reference files required for the pipeline.
-- `PLUMBER_ASSETS_PATH`: should point to the assets directory of the local pipeline config.
+- `PLUMBER_PIPELINE_ASSETS`: should point to the assets directory of the local pipeline config (is set when using plumber).
 
 ## Plumber integration
 
