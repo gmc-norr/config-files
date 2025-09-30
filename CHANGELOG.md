@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/gmc-norr/config-files/compare/v0.4.0...v0.5.0) (2025-09-30)
+
+
+### Features
+
+* add config for Twist Solid v0.23.0 ([#28](https://github.com/gmc-norr/config-files/issues/28)) ([cb20282](https://github.com/gmc-norr/config-files/commit/cb202821b382d9dc773a504d7cef0c95980a78d6))
+
 ## [0.4.0](https://github.com/gmc-norr/config-files/compare/v0.3.0...v0.4.0) (2025-02-27)
 
 ### Supported pipelines
