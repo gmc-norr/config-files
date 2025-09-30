@@ -1,0 +1,15 @@
+---
+jobs: 500
+keep-going: true
+latency-wait: 60
+restart-times: 2
+rerun-incomplete: true
+show-failed-logs: true
+
+use-conda: false
+use-singularity: true
+singularity-prefix: /storage/userdata/snakemake_singularity_cache
+singularity-args: --bind /storage --bind /scale --bind $HOME --bind /scratch --bind /tmp --cleanenv
+
+drmaa: " --time={resources.time} --cpus-per-task={resources.threads} --mem-per-cpu={resources.mem_per_cpu} --partition={resources.partition} -J twist-solid.{rule} --output=slurm_logs/{rule}_%j.out --error=slurm_logs/{rule}_%j.err"
+drmaa-log-dir: slurm_logs

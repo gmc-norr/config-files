@@ -1,12 +1,4 @@
 # These resource specifications have been optimised for running on the NGS Slurm setup at GMC North
-default_resources:
-  partition: research
-  time: "4:00:00"
-  threads: 1
-  ntasks: 1
-  mem_mb: 4096
-  mem_per_cpu: 4096
-
 arriba:
   time: "8:00:00"
   threads: 5

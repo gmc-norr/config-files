@@ -1,8 +1,8 @@
 version: 1
 pipelines:
   - name: nf-core/raredisease
-    engine: nextflow
     version: "2.4.0"
+    engine: nextflow
     profiles:
       - ./nextflow/nf-core/rv.config
     config_files:
@@ -15,12 +15,68 @@ pipelines:
       - ./nextflow/nf-core/assets/GRCh38_chr1-chr22chrXchrYchrM.interval_list
       - ./nextflow/nf-core/assets/variant_consequences.txt
   - name: genomic-medicine-sweden/Twist_Solid
+    version: "v0.14.0"
     engine: snakemake
-    version: "0.14.0"
+    executor:
+      name: python
+      version: "3.9"
+    environment:
+      PLUMBER_REFERENCE_DATA: /storage/userdata/references/homo_sapiens/twist-solid
+    args:
+      config:
+        - PROJECT_DESIGN_DATA=$PLUMBER_REFERENCE_DATA
+        - PROJECT_PON_DATA=$PLUMBER_REFERENCE_DATA
+        - PROJECT_REF_DATA=$PLUMBER_REFERENCE_DATA
+        - PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG
+        - PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+        - PLUMBER_PIPELINE_ASSETS=$PLUMBER_PIPELINE_ASSETS
+    assets:
+        - ./hydra-genetics/twist-solid/0.14.0/configs/resources.yaml
     profiles:
-      - ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_clinical
-      - ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_research
-    config_files:
-      - ./hydra-genetics/twist-solid/0.14.0/configs/config.yaml
-      - ./hydra-genetics/twist-solid/0.14.0/configs/resources_clinical.yaml
-      - ./hydra-genetics/twist-solid/0.14.0/configs/resources_research.yaml
+      - name: slurm_hg19_clinical
+        profile: ./hydra-genetics/twist-solid/0.14.0/profiles/slurm
+        config_files:
+          - $PLUMBER_PIPELINE_HOME/config/config.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/config.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/resources.clinical.yaml
+      - name: slurm_hg19_research
+        profile: ./hydra-genetics/twist-solid/0.14.0/profiles/slurm
+        config_files:
+          - $PLUMBER_PIPELINE_HOME/config/config.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/config.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/resources.research.yaml
+  - name: genomic-medicine-sweden/Twist_Solid
+    version: "v0.23.0"
+    engine: snakemake
+    environment:
+      PLUMBER_REFERENCE_DATA: /storage/userdata/references/homo_sapiens/twist-solid
+    args:
+      config:
+        - PROJECT_DESIGN_DATA=$PLUMBER_REFERENCE_DATA
+        - PROJECT_PON_DATA=$PLUMBER_REFERENCE_DATA
+        - PROJECT_REF_DATA=$PLUMBER_REFERENCE_DATA
+        - PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG
+        - PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+        - PLUMBER_PIPELINE_ASSETS=$PLUMBER_PIPELINE_ASSETS
+    executor:
+      name: python
+      version: "3.10"
+    assets:
+        - ./hydra-genetics/twist-solid/0.23.0/configs/resources.yaml
+    profiles:
+      - name: slurm_hg19_clinical
+        profile: ./hydra-genetics/twist-solid/0.23.0/profiles/slurm
+        config_files:
+          - $PLUMBER_PIPELINE_HOME/config/config.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.23.0/configs/config.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.23.0/configs/resources.clinical.yaml
+      - name: slurm_hg19_research
+        profile: ./hydra-genetics/twist-solid/0.23.0/profiles/slurm
+        config_files:
+          - $PLUMBER_PIPELINE_HOME/config/config.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.23.0/configs/config.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.23.0/configs/resources.research.yaml
