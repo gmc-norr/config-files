@@ -15,7 +15,7 @@ pipelines:
       - ./nextflow/nf-core/assets/GRCh38_chr1-chr22chrXchrYchrM.interval_list
       - ./nextflow/nf-core/assets/variant_consequences.txt
   - name: genomic-medicine-sweden/Twist_Solid
-    version: "0.14.0"
+    version: "v0.14.0"
     engine: snakemake
     executor:
       name: python
@@ -27,17 +27,25 @@ pipelines:
         - PROJECT_DESIGN_DATA=$PLUMBER_REFERENCE_DATA
         - PROJECT_PON_DATA=$PLUMBER_REFERENCE_DATA
         - PROJECT_REF_DATA=$PLUMBER_REFERENCE_DATA
+        - PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG
+        - PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+    assets:
+        - ./hydra-genetics/twist-solid/0.14.0/configs/resources.yaml
     profiles:
       - name: slurm_hg19_clinical
-        profile: ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_clinical
+        profile: ./hydra-genetics/twist-solid/0.14.0/profiles/slurm
         config_files:
-          - ./hydra-genetics/twist-solid/0.14.0/configs/config.yaml
-          - ./hydra-genetics/twist-solid/0.14.0/configs/resources_clinical.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/config.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/resources.clinical.yaml
       - name: slurm_hg19_research
-        profile: ./hydra-genetics/twist-solid/0.14.0/profiles/slurm_hg19_research
+        profile: ./hydra-genetics/twist-solid/0.14.0/profiles/slurm
         config_files:
-          - ./hydra-genetics/twist-solid/0.14.0/configs/config.yaml
-          - ./hydra-genetics/twist-solid/0.14.0/configs/resources_research.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/config.hg19.yaml
+          - ./hydra-genetics/twist-solid/0.14.0/configs/resources.research.yaml
   - name: genomic-medicine-sweden/Twist_Solid
     version: "v0.23.0"
     engine: snakemake
