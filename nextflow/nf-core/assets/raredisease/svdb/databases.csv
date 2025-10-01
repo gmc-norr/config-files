@@ -1,5 +1,6 @@
-/storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.v4.1.sv.sites.vcf.gz
-/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/cnvnator_db_2020.deidentified.vcf
-/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/lumpy_db_2020.deidentified.vcf
-/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/manta_db_2020.deidentified.vcf
-/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/tiddit_db_2020.deidentified.vcf
+filename,in_freq_info_key,in_allele_count_info_key,out_freq_info_key,out_allele_count_info_key
+/storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.v4.1.sv.sites.vcf.gz,AF,AN,gnomadAF,gnomadAN
+/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/cnvnator_db_2020.deidentified.vcf,FRQ,OCC,cnvnatorFRQ,cnvnatorOCC
+/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/lumpy_db_2020.deidentified.vcf,FRQ,OCC,lumpyFRQ,lumpyOCC
+/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/manta_db_2020.deidentified.vcf,FRQ,OCC,mantaFRQ,mantaOCC
+/storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/SweGenSVDBGRCh38/tiddit_db_2020.deidentified.vcf,FRQ,OCC,tidditFRQ,tidditOCC
