@@ -2,8 +2,6 @@
 /storage/userdata/references/homo_sapiens/GRCh38_hg38/cadd/whole_genome_SNVs.tsv.gz.tbi
 /storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/swegen_frequencies_fixploidy_GRCh38_20190204.vcf.gz
 /storage/userdata/references/homo_sapiens/GRCh38_hg38/swegen/swegen_frequencies_fixploidy_GRCh38_20190204.vcf.gz.tbi
-/storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.vcf.bgz
-/storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.vcf.bgz.tbi
 /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.chr1.vcf.bgz
 /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.chr1.vcf.bgz.tbi
 /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.chr2.vcf.bgz
