@@ -19,6 +19,13 @@ vep_cache: /storage/userdata/references/vep
 vep_cache_version: 113
 gnomad_af: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.af.tab.gz
 
+# Gens
+skip_gens: false
+gens_interval_list: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/genome.interval_list
+gens_pon_male: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/gens_male_pon.hdf5
+gens_pon_female: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/gens_female_pon.hdf5
+gens_gnomad_pos: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/gnomad_4.1_biallelic_snp_af0.05_positions.tsv
+
 # Skip some things for now since we don't have normal panels or other
 # info needed for these steps.
 skip_germlinecnvcaller: true
