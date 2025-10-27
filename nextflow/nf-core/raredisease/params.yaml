@@ -15,6 +15,7 @@ aligner: bwamem2
 variant_caller: deepvariant
 
 # Annotation
+skip_sv_annotation: false
 vep_cache: /storage/userdata/references/vep
 vep_cache_version: 113
 gnomad_af: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.genomes.v4.1.sites.af.tab.gz
@@ -26,10 +27,13 @@ gens_pon_male: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/gens_m
 gens_pon_female: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/gens_female_pon.hdf5
 gens_gnomad_pos: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/gnomad_4.1_biallelic_snp_af0.05_positions.tsv
 
+# GATK GermlineCNVCaller
+skip_germlinecnvcaller: false
+readcount_intervals: /storage/userdata/references/homo_sapiens/GRCh38_hg38/germlinecnvcaller/ploidy_model/interval_list.intervals
+ploidy_model: /storage/userdata/references/homo_sapiens/GRCh38_hg38/germlinecnvcaller/ploidy_model
+
 # Skip some things for now since we don't have normal panels or other
 # info needed for these steps.
-skip_germlinecnvcaller: true
-skip_sv_annotation: false
 skip_me_calling: true
 skip_me_annotation: true
 skip_mt_annotation: true
