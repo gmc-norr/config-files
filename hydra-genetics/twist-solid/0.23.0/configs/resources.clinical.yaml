@@ -3,5 +3,5 @@ default_resources:
   time: "4:00:00"
   threads: 1
   ntasks: 1
-  mem_mb: 4096
-  mem_per_cpu: 4096
+  mem_mb: 4000
+  mem_per_cpu: 4000
