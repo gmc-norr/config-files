@@ -68,8 +68,8 @@ manta_run_workflow_t:
   mem_mb: 16000
 
 optitype:
-  threads: 8
-  mem_mb: 32000
+  threads: 12
+  mem_mb: 48000
 
 star:
   time: "8:00:00"
