@@ -2,46 +2,46 @@
 arriba:
   time: "8:00:00"
   threads: 5
-  mem_mb: 20480
+  mem_mb: 20000
 
 bwa_mem:
   time: "8:00:00"
   threads: 15
-  mem_mb: 61440
+  mem_mb: 60000
 
 bwa_mem_realign_consensus_reads:
   time: "8:00:00"
   threads: 10
-  mem_mb: 40960
+  mem_mb: 40000
 
 fastp_pe:
   threads: 5
-  mem_mb: 20480
+  mem_mb: 20000
 
 fastp_pe_arriba:
   threads: 5
-  mem_mb: 20480
+  mem_mb: 20000
 
 fastqc:
   threads: 2
-  mem_mb: 8192
+  mem_mb: 8000
 
 fgbio_call_and_filter_consensus_reads:
   time: "16:00:00"
   threads: 3
-  mem_mb: 12288
+  mem_mb: 12000
 
 fgbio_group_reads_by_umi:
   time: "8:00:00"
 
 fuseq_wes:
   time: "48:00:00"
-  threads: 2
-  mem_mb: 8192
+  threads: 4
+  mem_mb: 16000
 
 fusioncatcher:
   threads: 10
-  mem_mb: 40960
+  mem_mb: 4000
 
 gatk_mutect2:
   time: "8:00:00"
@@ -52,7 +52,7 @@ gatk_mutect2_gvcf:
 gene_fuse:
   time: "8:00:00"
   threads: 6
-  mem_mb: 24576
+  mem_mb: 24000
 
 juli_call:
   time: "48:00:00"
@@ -65,23 +65,29 @@ jumble_run:
 manta_run_workflow_t:
   time: "8:00:00"
   threads: 4
-  mem_mb: 16384
+  mem_mb: 16000
+
+optitype:
+  threads: 12
+  mem_mb: 48000
 
 star:
   time: "8:00:00"
   threads: 10
-  mem_mb: 40960
+  mem_mb: 40000
 
 star_fusion:
   time: "8:00:00"
   threads: 10
-  mem_mb: 40960
+  mem_mb: 40000
 
 vardict:
   time: "10:00:00"
+  threads: 8
+  mem_mb: 32000
 
 vep:
   time: "6:00:00"
   threads: 10
-  mem_mb: 40960
+  mem_mb: 40000
 
