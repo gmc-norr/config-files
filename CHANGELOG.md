@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/gmc-norr/config-files/compare/v0.5.0...v0.5.1) (2025-10-30)
+
+
+### Bug Fixes
+
+* **Twist Solid:** adjust resources to avoid OOM kills ([#31](https://github.com/gmc-norr/config-files/issues/31)) ([fbf8120](https://github.com/gmc-norr/config-files/commit/fbf81203b37c4ba231b5c87e4d414dca284eacf5))
+
 ## [0.5.0](https://github.com/gmc-norr/config-files/compare/v0.4.0...v0.5.0) (2025-09-30)
 
 
