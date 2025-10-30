@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/gmc-norr/config-files/compare/v0.4.0...v0.4.1) (2025-10-30)
+
+### Bug fixes
+
+- **plumber:** update plumberfile structure to support lastest plumber version (aa2d095)
+- **nf-core/raredisease:** update assets path
+
 ## [0.4.0](https://github.com/gmc-norr/config-files/compare/v0.3.0...v0.4.0) (2025-02-27)
 
 ### Supported pipelines
