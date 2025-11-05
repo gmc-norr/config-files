@@ -29,8 +29,8 @@ gens_gnomad_pos: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gens/gnom
 
 # GATK GermlineCNVCaller
 skip_germlinecnvcaller: false
-readcount_intervals: /storage/userdata/references/homo_sapiens/GRCh38_hg38/germlinecnvcaller/ploidy_model/interval_list.intervals
-ploidy_model: /storage/userdata/references/homo_sapiens/GRCh38_hg38/germlinecnvcaller/ploidy_model
+readcount_intervals: /storage/userdata/references/homo_sapiens/GRCh38_hg38/germlinecnvcaller/ploidy_model_kernel-0.8/interval_list.intervals
+ploidy_model: /storage/userdata/references/homo_sapiens/GRCh38_hg38/germlinecnvcaller/ploidy_model_kernel-0.8
 
 # Skip some things for now since we don't have normal panels or other
 # info needed for these steps.
