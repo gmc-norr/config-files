@@ -125,7 +125,7 @@ gitGraph
 
 The `v1.3` branch is then never merged into the main branch, but continues to live on its own.
 
-If a new fix is added to the `v1.3` branch, the `v1.3` tag is moved to the most recent release.
+If a new fix is added to the `v1.3` branch, base it off of the most recent commit on this branch and then move the `v1.3` tag to the most recent release:
 
 ```mermaid
 gitGraph
