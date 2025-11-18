@@ -84,3 +84,66 @@ plumber nextflow run -p clinical nf-core/raredisease
 ```
 
 Configs and assets will be downloaded automatically, and the appropriate environment variables will be set.
+
+## Development
+
+### Versioning
+
+This repo uses semantic versioning.
+The idea is that the major version represents plumber compatibility, and the minor version represents config changes that are compatible with plumber.
+This could be things like adding a configuration for a new pipeline or a new version of a pipeline, or adding capabilities to existing configurations such as new outputs.
+Finally, the patch version represents fixes that do not affect pipeline outputs, such as adjusting paths for various resources or adjusting the compute cluster configuration.
+
+### Releases
+
+Releases on the main branch are handled by the release-please Github action, so here no further action needs to be taken.
+In cases when an older version needs to be patched, these releases need to be handled manually for now.
+
+If fixes to a minor version need to be applied, a new branch should be created from the initial minor version.
+This branch should be named according to the minor version from which it is branched off of.
+If we, for example, have version 1.3.0 and want to apply a fix to this, a new branch named `v1.3` should be created.
+Fixes can be done either directly on this branch or on a separate branch that is then merged into `v1.3`.
+To release the fix, tag the commit according to the patch version in question (`v1.3.1` in this case), but also tag it with `v1.3`, and then create a release from the `v1.3.1` tag.
+Whenever new patches are released for the same minor version, the minor version tag should be moved to this commit.
+
+The diagram below shows how the commit history could look for such a change.
+
+```mermaid
+gitGraph
+    commit tag: "v1.3.0"
+    branch v1.3
+    checkout v1.3
+    branch 1.3-fix
+    checkout 1.3-fix
+    commit
+    commit
+    checkout v1.3
+    merge 1.3-fix tag: "v1.3" tag: "v1.3.1"
+	checkout main
+	commit tag: "v1.4.0"
+```
+
+The `v1.3` branch is then never merged into the main branch, but continues to live on its own.
+
+If a new fix is added to the `v1.3` branch, the `v1.3` tag is moved to the most recent release.
+
+```mermaid
+gitGraph
+    commit tag: "v1.3.0"
+    branch v1.3
+    checkout v1.3
+    branch 1.3-fix
+    checkout 1.3-fix
+    commit
+    commit
+    checkout v1.3
+    merge 1.3-fix tag: "v1.3.1"
+	branch 1.3-fix-2
+    checkout 1.3-fix-2
+    commit
+    commit
+    checkout v1.3
+    merge 1.3-fix-2 tag: "v1.3" tag: "v1.3.2"
+	checkout main
+	commit tag: "v1.4.0"
+```
