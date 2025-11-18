@@ -147,3 +147,6 @@ gitGraph
 	checkout main
 	commit tag: "v1.4.0"
 ```
+
+> [!TIP]
+> To keep things clean, use squash merges.
