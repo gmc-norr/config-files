@@ -21,6 +21,7 @@ gnomad_af: /storage/userdata/references/homo_sapiens/GRCh38_hg38/gnomad/gnomad.g
 
 # Skip some things for now since we don't have normal panels or other
 # info needed for these steps.
+skip_sv_calling: true
 skip_germlinecnvcaller: true
 skip_sv_annotation: true
 skip_me_calling: true
