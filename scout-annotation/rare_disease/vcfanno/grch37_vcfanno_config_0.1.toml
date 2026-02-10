@@ -11,3 +11,9 @@ file = "spidex/hg19_spidex.tsv.gz"
 names = ["SPIDEX"]
 ops = ["mean"]
 columns = [6]
+
+[[annotation]]
+file = "loqusdb-rd/loqusdb-local-frequencies_rd_latest_.vcf.gz"
+fields = ["Frq", "Obs", "Hom"]
+ops = ["self", "self", "self"]
+names = ["LOQUSDB_RD_FRQ", "LOQUSDB_RD_OBS", "LOQUSDB_RD_HOM"]
