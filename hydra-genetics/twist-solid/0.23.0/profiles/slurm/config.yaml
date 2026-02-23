@@ -2,7 +2,6 @@
 jobs: 500
 keep-going: true
 latency-wait: 60
-restart-times: 2
 rerun-incomplete: true
 show-failed-logs: true
 
