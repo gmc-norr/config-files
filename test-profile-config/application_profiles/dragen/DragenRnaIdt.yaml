@@ -1,5 +1,5 @@
 ---
-ApplicationProfileName: DragenRna
+ApplicationProfileName: DragenRnaIdt
 ApplicationProfileVersion: 1.0
 ApplicationName: DragenRna
 ApplicationType: Dragen
@@ -36,4 +36,3 @@ DataFields:
   - Comparison4
   - Comparison5
   - Sample_ID
-
