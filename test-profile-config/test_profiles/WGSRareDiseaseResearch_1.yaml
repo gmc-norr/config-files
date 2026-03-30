@@ -1,9 +1,9 @@
 ---
 TestType: WGS
-TestName: WGSRareDisease_1
+TestName: WGSRareDiseaseResearch_1
 Description: >
   Whole Genome Sequencing, pipeline nf-core/raredisease 2.4.0, for research
-Version: 2.0
+Version: 1.0
 
 TestApplicationProfiles:
   OnInstrument:
@@ -15,5 +15,5 @@ TestApplicationProfiles:
 
   DownstreamAnalysis:
     - ApplicationProfileName: NfCoreRareDiseaseResearch
-      ApplicationProfileVersion: 2
+      ApplicationProfileVersion: 1
       DependsOn: BCLConvertNextera

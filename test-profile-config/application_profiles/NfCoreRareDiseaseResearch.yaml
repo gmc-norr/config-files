@@ -1,5 +1,5 @@
 ---
-ApplicationProfileName: NfCoreRareDisease
+ApplicationProfileName: NfCoreRareDiseaseResearch
 ApplicationProfileVersion: 1.0
 ApplicationType: nextflow
 ApplicationName: nf-core/raredisease
