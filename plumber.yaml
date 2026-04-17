@@ -96,7 +96,7 @@ pipelines:
       version: "3.12"
     assets:
       - ./snakemake/scout-annotation/1.0.0/configs/vcfanno_config.toml
-      - ./scout-annotation/cancer/rank_model/cancer_rank_model_0.1.ini
+      - ./rankmodels/cancer_rank_model_0.1.ini
     profiles:
       - name: slurm_hg19_clinical
         profile: ./snakemake/scout-annotation/1.0.0/profiles/clinical
