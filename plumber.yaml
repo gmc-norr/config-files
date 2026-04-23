@@ -81,8 +81,7 @@ pipelines:
           - ./hydra-genetics/twist-solid/0.23.0/configs/config.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/resources.research.yaml
   - name: gmc-norr/scout-annotation
-    # version: "v1.0.0"
-    version: main
+    version: "v1.0.0"
     engine: snakemake
     args:
       config:
