@@ -1,4 +1,0 @@
-cores: 8
-use-singularity: true
-singularity-prefix: /storage/userdata/singularity_cache
-singularity-args: --bind /storage

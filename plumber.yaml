@@ -80,3 +80,30 @@ pipelines:
           - $PLUMBER_PIPELINE_HOME/config/config.data.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/config.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/resources.research.yaml
+  - name: gmc-norr/scout-annotation
+    version: "v1.1.0"
+    engine: snakemake
+    args:
+      config:
+        - PLUMBER_PIPELINE_CONFIG=$PLUMBER_PIPELINE_CONFIG
+        - PLUMBER_PIPELINE_HOME=$PLUMBER_PIPELINE_HOME
+        - PLUMBER_PIPELINE_ASSETS=$PLUMBER_PIPELINE_ASSETS
+        - "vcfanno={'config': '$PLUMBER_PIPELINE_ASSETS/vcfanno_config.toml'}"
+        - "genmod={'rankmodel': '$PLUMBER_PIPELINE_ASSETS/cancer_rank_model_0.1.ini'}"
+    executor:
+      name: python
+      version: "3.12"
+    assets:
+      - ./snakemake/scout-annotation/1.0.0/configs/vcfanno_config.toml
+      - ./rankmodels/cancer_rank_model_0.1.ini
+    profiles:
+      - name: slurm_hg19_clinical
+        profile: ./snakemake/scout-annotation/1.0.0/profiles/clinical
+        config_files:
+          - $PLUMBER_PIPELINE_HOME/default_config/config.yaml
+          - ./snakemake/scout-annotation/1.0.0/configs/config.yaml
+      - name: slurm_hg19_research
+        profile: ./snakemake/scout-annotation/1.0.0/profiles/research
+        config_files:
+          - $PLUMBER_PIPELINE_HOME/default_config/config.yaml
+          - ./snakemake/scout-annotation/1.0.0/configs/config.yaml
