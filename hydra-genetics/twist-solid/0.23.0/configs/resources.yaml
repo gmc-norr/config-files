@@ -36,8 +36,8 @@ fgbio_group_reads_by_umi:
 
 fuseq_wes:
   time: "48:00:00"
-  threads: 4
-  mem_mb: 16000
+  threads: 8
+  mem_mb: 32000
 
 fusioncatcher:
   threads: 10
@@ -69,8 +69,8 @@ manta_run_workflow_t:
 
 optitype:
   time: "8:00:00"
-  threads: 26
-  mem_mb: 104000
+  threads: 32
+  mem_mb: 128000
 
 star:
   time: "8:00:00"
