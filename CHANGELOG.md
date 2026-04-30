@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.6.0](https://github.com/gmc-norr/config-files/compare/v0.5.1...v0.6.0) (2026-04-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **scout-annotation:** add new scout-annotation config ([#48](https://github.com/gmc-norr/config-files/issues/48))
+
+### Features
+
+* add test profile configs for rare-disease ([#38](https://github.com/gmc-norr/config-files/issues/38)) ([1f3111d](https://github.com/gmc-norr/config-files/commit/1f3111ded901229761cb7d34568a1b978858c565))
+* **nf-core/raredisease:** add SV support ([#49](https://github.com/gmc-norr/config-files/issues/49)) ([fa3b6f7](https://github.com/gmc-norr/config-files/commit/fa3b6f710d49f1412c1245ab45f794d6473d2b3e))
+* **scout-annotation:** add new scout-annotation config ([#48](https://github.com/gmc-norr/config-files/issues/48)) ([3bd2b4a](https://github.com/gmc-norr/config-files/commit/3bd2b4a8d4311b835d4272fc94ffe778f4e5e9e7))
+
+
+### Bug Fixes
+
+* bind /seqdata in twist solid profile ([#44](https://github.com/gmc-norr/config-files/issues/44)) ([f179555](https://github.com/gmc-norr/config-files/commit/f179555e6e5927eab3d7947aeff725fbb94b4eea))
+* don't attempt to restart failed jobs ([dc1788c](https://github.com/gmc-norr/config-files/commit/dc1788c6cbbc83e62040c334c41a292e59fbe36f))
+* increase memory allocation for juli ([#42](https://github.com/gmc-norr/config-files/issues/42)) ([ec483fe](https://github.com/gmc-norr/config-files/commit/ec483fef582488040472a2459b48c1d06897cdf8))
+* increase memory allocation for juli_call ([d729142](https://github.com/gmc-norr/config-files/commit/d7291429691ee8b7f22c2d250d7735d0efd04aa0))
+* increase time and memory allocation for optitype ([ede2348](https://github.com/gmc-norr/config-files/commit/ede2348f570aca014afaec1bc3093c79d01db527))
+* set correct version for scout-annotation in paths ([#50](https://github.com/gmc-norr/config-files/issues/50)) ([e6a5a89](https://github.com/gmc-norr/config-files/commit/e6a5a89b3ab47ee71fd4381a56cfbd5d7efd9523))
+* **twist-solid:** bump resources ([#51](https://github.com/gmc-norr/config-files/issues/51)) ([133c68d](https://github.com/gmc-norr/config-files/commit/133c68d798ef7f2b2bc06b5b83e08e1a3d793f10))
+
 ## [0.5.1](https://github.com/gmc-norr/config-files/compare/v0.5.0...v0.5.1) (2025-10-30)
 
 
