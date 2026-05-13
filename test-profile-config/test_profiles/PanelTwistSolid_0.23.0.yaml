@@ -1,0 +1,15 @@
+---
+TestType: Panel
+TestName: PanelTwistSolid_0.23.0
+Description: Sekvensering Tumör-prov, panel Twist GMS560, pipeline Twist Solid v.0.23.0
+Version: 1.0 
+
+TestApplicationProfiles:
+  OnInstrument:
+    - ApplicationProfileName: BCLConvertNextera
+      ApplicationProfileVersion: 1
+
+  DownstreamAnalysis:
+    - ApplicationProfileName: GMSTwistSolid
+      ApplicationProfileVersion: 1
+      DependsOn: BCLConvertNextera
