@@ -1,4 +1,9 @@
 # These resource specifications have been optimised for running on the NGS Slurm setup at GMC North
+add_mosdepth_coverage_to_gvcf:
+  time: "8:00:00"
+  threads: 4
+  mem_mb: 16000
+
 arriba:
   time: "8:00:00"
   threads: 5
@@ -36,8 +41,8 @@ fgbio_group_reads_by_umi:
 
 fuseq_wes:
   time: "48:00:00"
-  threads: 8
-  mem_mb: 32000
+  threads: 16
+  mem_mb: 64000
 
 fusioncatcher:
   threads: 10
