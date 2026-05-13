@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.1](https://github.com/gmc-norr/config-files/compare/v0.6.0...v0.6.1) (2026-05-13)
+
+
+### Bug Fixes
+
+* bump resources for fuseq_wes and add_mosdepth_coverage_to_gvcf  ([#53](https://github.com/gmc-norr/config-files/issues/53)) ([e3e805f](https://github.com/gmc-norr/config-files/commit/e3e805fa2c700c2cb87af0f3b8b64d3d5bb7ef1c))
+* bump resources for fuseq_wes and add_mosdepth_coverage_to_gvcf for the gms-solid pipeline ([e3e805f](https://github.com/gmc-norr/config-files/commit/e3e805fa2c700c2cb87af0f3b8b64d3d5bb7ef1c))
+
 ## [0.6.0](https://github.com/gmc-norr/config-files/compare/v0.5.1...v0.6.0) (2026-04-30)
 
 
