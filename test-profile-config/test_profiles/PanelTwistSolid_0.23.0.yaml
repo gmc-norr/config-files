@@ -13,3 +13,6 @@ TestApplicationProfiles:
     - ApplicationProfileName: GMSTwistSolid
       ApplicationProfileVersion: 1
       DependsOn: BCLConvertNextera
+    - ApplicationProfileName: GmcNorrScoutAnnotation
+      ApplicationProfileVersion: 1
+      DependsOn: GMSTwistSolid
