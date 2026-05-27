@@ -1,10 +1,10 @@
 ---
 ApplicationProfileName: NfCoreRareDiseaseResearch
-ApplicationProfileVersion: 1.0
+ApplicationProfileVersion: 1.1
 ApplicationType: nextflow
 ApplicationName: nf-core/raredisease
 
 Settings:
   Version: 2.4.0
   Profile: research
-  ConfigVersion: v0.4.2
+  ConfigVersion: v0.4
