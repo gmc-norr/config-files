@@ -1,0 +1,10 @@
+---
+ApplicationProfileName: GmcNorrScoutAnnotation
+ApplicationProfileVersion: 1.0
+ApplicationType: snakemake
+ApplicationName: gmc-norr/scout-annotation
+
+Settings:
+  Version: v1.1.0
+  Profile: slurm_hg19_clinical
+  ConfigVersion: v0.6.1
