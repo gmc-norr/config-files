@@ -61,8 +61,8 @@ gene_fuse:
 
 juli_call:
   time: "48:00:00"
-  threads: 24
-  mem_mb: 96000
+  threads: 32
+  mem_mb: 128000
 
 jumble_run:
   threads: 10
