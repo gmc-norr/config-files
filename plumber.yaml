@@ -14,6 +14,15 @@ pipelines:
       - ./nextflow/nf-core/assets/GRCh38_chrY.interval_list
       - ./nextflow/nf-core/assets/GRCh38_chr1-chr22chrXchrYchrM.interval_list
       - ./nextflow/nf-core/assets/variant_consequences.txt
+  - name: nf-core/oncoanalyser
+    version: "2.3.0"
+    engine: nextflow
+    profiles:
+      - ./nextflow/nf-core/rv.config
+    config_files:
+      - ./nextflow/nf-core/oncoanalyser/oncoanalyser.config
+    param_files:
+      - ./nextflow/nf-core/oncoanalyser/params.yaml
   - name: genomic-medicine-sweden/Twist_Solid
     version: "v0.14.0"
     engine: snakemake

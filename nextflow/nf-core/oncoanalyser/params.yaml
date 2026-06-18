@@ -1,0 +1,9 @@
+# Input/output
+input: samplesheet.csv
+outdir: oncoanalyser_results
+
+# Type of data
+mode: wgts
+
+# References
+genome: GRCh38_hmf
