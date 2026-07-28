@@ -2,6 +2,11 @@ output: "{{PLUMBER_PIPELINE_HOME}}/config/output_files.yaml"
 resources: "{{PLUMBER_PIPELINE_ASSETS}}/resources.yaml"
 general_report: "{{PLUMBER_PIPELINE_HOME}}/config/reports/general_report.yaml"
 
+subsample: "seqtk"
+
+seqtk_subsample:
+  nr_reads: 100000000
+
 filter_vcf:
   snv_soft_filter: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_soft_filter_uppsala_vep105.yaml"
   snv_soft_filter_umi: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_soft_filter_umi_vep105.yaml"
