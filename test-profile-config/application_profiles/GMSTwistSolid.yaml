@@ -8,4 +8,4 @@ Settings:
   Version: v0.23.0
   Profile: slurm_hg19_clinical
   ConfigVersion: v0.6.1
-  ExtraArguments: "-- --latency-wait 120"
+  AdditionalArguments: "-- --latency-wait 120"
