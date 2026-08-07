@@ -1,6 +1,6 @@
 ---
 ApplicationProfileName: GMSTwistSolid
-ApplicationProfileVersion: 1.0
+ApplicationProfileVersion: 1.1
 ApplicationType: snakemake
 ApplicationName: genomic-medicine-sweden/Twist_Solid
 
@@ -8,3 +8,4 @@ Settings:
   Version: v0.23.0
   Profile: slurm_hg19_clinical
   ConfigVersion: v0.6.1
+  ExtraArguments: "-- --latency-wait 120"
