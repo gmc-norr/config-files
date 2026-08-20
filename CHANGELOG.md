@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.7.0](https://github.com/gmc-norr/config-files/compare/v0.6.1...v0.7.0) (2026-08-20)
+
+
+### Features
+
+* add application and test profiles for Twist Solid and scout-annotation  ([#56](https://github.com/gmc-norr/config-files/issues/56)) ([5ec2dba](https://github.com/gmc-norr/config-files/commit/5ec2dba7fe498ba602d81dfc93933cca1980a0cf))
+* **GMSTwistSolid:** Add additional arguments to application profile ([#63](https://github.com/gmc-norr/config-files/issues/63)) ([0927101](https://github.com/gmc-norr/config-files/commit/092710159b25ac1eb4c1b95c8ae0dce883844b07))
+* update GMS Solid application profile to use config version 0.6.2 ([#65](https://github.com/gmc-norr/config-files/issues/65)) ([933b19a](https://github.com/gmc-norr/config-files/commit/933b19a83b54e48330b85764bcdbfc3f9d7bb262))
+
+
+### Bug Fixes
+
+* update rare-disease application profile to config-version 0.4 ([#58](https://github.com/gmc-norr/config-files/issues/58)) ([b8ca52e](https://github.com/gmc-norr/config-files/commit/b8ca52e0dcfb9caa19e0c56cf2cf06ade36783aa))
+
 ## [0.6.1](https://github.com/gmc-norr/config-files/compare/v0.6.0...v0.6.1) (2026-05-13)
 
 
