@@ -1,4 +1,4 @@
-output: "{{PLUMBER_PIPELINE_HOME}}/config/output_files.yaml"
+output: "{{PLUMBER_PIPELINE_ASSETS}}/output_files_rv.yaml"
 resources: "{{PLUMBER_PIPELINE_ASSETS}}/resources.yaml"
 general_report: "{{PLUMBER_PIPELINE_HOME}}/config/reports/general_report.yaml"
 
