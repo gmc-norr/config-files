@@ -13,6 +13,6 @@ TestApplicationProfiles:
       ApplicationProfileVersion: 1
 
   DownstreamAnalysis:
-    - ApplicationProfileName: NfCoreRareDiseaseSV
+    - ApplicationProfileName: NfCoreRareDiseaseCNV
       ApplicationProfileVersion: 1
       DependsOn: BCLConvertNextera
