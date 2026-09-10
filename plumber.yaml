@@ -66,6 +66,9 @@ pipelines:
     assets:
         - ./hydra-genetics/twist-solid/0.23.0/configs/resources.yaml
         - ./hydra-genetics/twist-solid/0.23.0/configs/output_files_rv.yaml
+        - ./hydra-genetics/twist-solid/0.23.0/configs/filters/config_hard_filter_umea_vep105.yaml
+        - ./hydra-genetics/twist-solid/0.23.0/configs/filters/config_soft_filter_umea_vep105.yaml
+
     profiles:
       - name: slurm_hg19_clinical
         profile: ./hydra-genetics/twist-solid/0.23.0/profiles/slurm
