@@ -34,6 +34,4 @@ ploidy_model: /storage/userdata/references/homo_sapiens/GRCh38_hg38/germlinecnvc
 
 # Skip some things for now since we don't have normal panels or other
 # info needed for these steps.
-skip_me_calling: true
-skip_me_annotation: true
-skip_mt_annotation: true
+skip_subworkflows: me_calling,me_annotation,mt_annotation
