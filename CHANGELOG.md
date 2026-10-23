@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.7.0](https://github.com/gmc-norr/config-files/compare/v0.6.1...v0.7.0) (2026-10-23)
+
+
+### Features
+
+* add application and test profiles for Twist Solid and scout-annotation  ([#56](https://github.com/gmc-norr/config-files/issues/56)) ([5ec2dba](https://github.com/gmc-norr/config-files/commit/5ec2dba7fe498ba602d81dfc93933cca1980a0cf))
+* add test and application profiles for raredisease CNV reruns ([#73](https://github.com/gmc-norr/config-files/issues/73)) ([a696a0e](https://github.com/gmc-norr/config-files/commit/a696a0e19b0bfca6d47899c8237c45a1ba829b73))
+* add TestProfile WGSRareDisease_2 with corresponding application profile ([#70](https://github.com/gmc-norr/config-files/issues/70)) ([027d1db](https://github.com/gmc-norr/config-files/commit/027d1dbe46f6577f2b81ded316e49a97d4aec0bd))
+* **GMSTwistSolid:** Add additional arguments to application profile ([#63](https://github.com/gmc-norr/config-files/issues/63)) ([0927101](https://github.com/gmc-norr/config-files/commit/092710159b25ac1eb4c1b95c8ae0dce883844b07))
+* update GMS Solid application profile to use config version 0.6.2 ([#65](https://github.com/gmc-norr/config-files/issues/65)) ([933b19a](https://github.com/gmc-norr/config-files/commit/933b19a83b54e48330b85764bcdbfc3f9d7bb262))
+
+
+### Bug Fixes
+
+* add SV rankmodel definition to rankmodel folder ([#71](https://github.com/gmc-norr/config-files/issues/71)) ([3d0db82](https://github.com/gmc-norr/config-files/commit/3d0db82834d0466971c553cf114bc6849ffc5aa7))
+* update rare-disease application profile to config-version 0.4 ([#58](https://github.com/gmc-norr/config-files/issues/58)) ([b8ca52e](https://github.com/gmc-norr/config-files/commit/b8ca52e0dcfb9caa19e0c56cf2cf06ade36783aa))
+
 ## [0.6.1](https://github.com/gmc-norr/config-files/compare/v0.6.0...v0.6.1) (2026-05-13)
 
 
