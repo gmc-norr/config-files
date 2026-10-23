@@ -1,7 +1,7 @@
 ---
 TestType: WGS
-TestName: WGSRareDisease_2
-Description: Whole Genome Sequencing, pipeline nf-core/raredisease 2.4.0
+TestName: WGSRareDiseaseCNV_2
+Description: Whole Genome Sequencing, pipeline nf-core/raredisease 2.4.0, reanalysis CNVs
 Version: 1.0
 
 TestApplicationProfiles:
