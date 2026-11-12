@@ -97,7 +97,7 @@ pipelines:
       name: python
       version: "3.10"
     assets:
-        - ./hydra-genetics/gms-solid/1.5.0/configs/resources.yaml
+        - ./hydra-genetics/gms-solid/1.11.1/configs/resources.yaml
     profiles:
       - name: slurm_hg38_clinical
         profile: ./hydra-genetics/gms-solid/1.11.1/profiles/slurm
