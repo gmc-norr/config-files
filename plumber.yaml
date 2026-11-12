@@ -81,7 +81,7 @@ pipelines:
           - ./hydra-genetics/twist-solid/0.23.0/configs/config.hg19.yaml
           - ./hydra-genetics/twist-solid/0.23.0/configs/resources.research.yaml
   - name: genomic-medicine-sweden/GMS_Solid
-    version: "v1.5.0"
+    version: "v1.11.1"
     engine: snakemake
     environment:
       PLUMBER_REFERENCE_DATA: /storage/userdata/references/homo_sapiens/gms-solid
@@ -100,19 +100,19 @@ pipelines:
         - ./hydra-genetics/gms-solid/1.5.0/configs/resources.yaml
     profiles:
       - name: slurm_hg38_clinical
-        profile: ./hydra-genetics/gms-solid/1.5.0/profiles/slurm
+        profile: ./hydra-genetics/gms-solid/1.11.1/profiles/slurm
         config_files:
           - $PLUMBER_PIPELINE_HOME/config/config.yaml
-          - $PLUMBER_PIPELINE_HOME/config/config.data.hg38.yaml
-          - ./hydra-genetics/gms-solid/1.5.0/configs/config.hg38.yaml
-          - ./hydra-genetics/gms-solid/1.5.0/configs/resources.clinical.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg38.GMS-Solid.yaml
+          - ./hydra-genetics/gms-solid/1.11.1/configs/config.hg38.yaml
+          - ./hydra-genetics/gms-solid/1.11.1/configs/resources.clinical.yaml
       - name: slurm_hg38_research
-        profile: ./hydra-genetics/gms-solid/1.5.0/profiles/slurm
+        profile: ./hydra-genetics/gms-solid/1.11.1/profiles/slurm
         config_files:
           - $PLUMBER_PIPELINE_HOME/config/config.yaml
-          - $PLUMBER_PIPELINE_HOME/config/config.data.hg38.yaml
-          - ./hydra-genetics/gms-solid/1.5.0/configs/config.hg38.yaml
-          - ./hydra-genetics/gms-solid/1.5.0/configs/resources.research.yaml
+          - $PLUMBER_PIPELINE_HOME/config/config.data.hg38.GMS-Solid.yaml
+          - ./hydra-genetics/gms-solid/1.11.1/configs/config.hg38.yaml
+          - ./hydra-genetics/gms-solid/1.11.1/configs/resources.research.yaml
   - name: gmc-norr/scout-annotation
     version: "v1.1.0"
     engine: snakemake

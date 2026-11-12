@@ -1,0 +1,39 @@
+output: "{{PLUMBER_PIPELINE_HOME}}/config/output_files_FFPE.yaml"
+resources: "{{PLUMBER_PIPELINE_ASSETS}}/resources.yaml"
+general_report: "{{PLUMBER_PIPELINE_HOME}}/config/reports/general_report.yaml"
+
+subsample: "seqtk"
+
+filter_vcf:
+  snv_soft_filter: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_soft_filter_vep113.yaml"
+  snv_soft_filter_umi: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_soft_filter_umi_vep113.yaml"
+  snv_hard_filter: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_hard_filter_vep113.yaml"
+  snv_hard_filter_umi: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_hard_filter_umi_vep113.yaml"
+  snv_hard_filter_purecn: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_hard_filter_purecn.yaml"
+  cnv_hard_filter_amp: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_hard_filter_cnv_amp.yaml"
+  cnv_hard_filter_loh: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_hard_filter_cnv_loh.yaml"
+  germline: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_hard_filter_germline_vep113.yaml"
+  itd_hard_filter: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_hard_filter_scanitd.yaml"
+
+hotspot_annotation:
+  chr_translation_file: "{{PLUMBER_PIPELINE_HOME}}/config/reports/hotspot_report.chr.translation.hg38"
+
+hotspot_report:
+  chr_translation_file: "{{PLUMBER_PIPELINE_HOME}}/config/reports/hotspot_report.chr.translation.hg38"
+  report_config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/hotspot_report_vep113.yaml"
+
+general_html_report:
+  multiqc_config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_dna.yaml"
+
+merge_cnv_json:
+  cancer_genes: "{{PLUMBER_PIPELINE_HOME}}/config/reports/cancer_genes.csv"
+  table_filter_config: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_table_filter.yaml"
+
+multiqc:
+  reports:
+    DNA:
+      config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_dna.yaml"
+    DNA_umi:
+      config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_dna.yaml"
+    RNA:
+      config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_rna.yaml"
