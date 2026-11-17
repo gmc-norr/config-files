@@ -2,7 +2,7 @@ output: "{{PLUMBER_PIPELINE_HOME}}/config/output_files_FFPE.yaml"
 resources: "{{PLUMBER_PIPELINE_ASSETS}}/resources.yaml"
 general_report: "{{PLUMBER_PIPELINE_HOME}}/config/reports/general_report.yaml"
 
-short_read_aligner: "bwa_mem"
+subsample: "seqtk"
 
 filter_vcf:
   snv_soft_filter: "{{PLUMBER_PIPELINE_HOME}}/config/filters/config_soft_filter_vep113.yaml"
@@ -34,6 +34,6 @@ multiqc:
     DNA:
       config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_dna.yaml"
     DNA_umi:
-      config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_dna.yaml"
+      config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_dna_umi.yaml"
     RNA:
       config: "{{PLUMBER_PIPELINE_HOME}}/config/reports/multiqc_config_rna.yaml"
