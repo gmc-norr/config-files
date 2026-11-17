@@ -1,7 +1,7 @@
 ---
 TestType: Panel
 TestName: PanelTwistSolid_utveckling
-Description: Sekvensering Tumör-prov, panel Twist GMS560, pipeline Twist Solid v.0.23.0
+Description: Pipeline Twist Solid v.0.23.0 and annotation with gmc-norr/scout-annotation
 Version: 1.0
 
 TestApplicationProfiles:
