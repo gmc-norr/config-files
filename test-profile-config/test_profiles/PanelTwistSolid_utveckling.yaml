@@ -1,0 +1,18 @@
+---
+TestType: Panel
+TestName: PanelTwistSolid_utveckling
+Description: Pipeline Twist Solid v.0.23.0 and annotation with gmc-norr/scout-annotation
+Version: 1.0
+
+TestApplicationProfiles:
+  OnInstrument:
+    - ApplicationProfileName: BCLConvertNextera
+      ApplicationProfileVersion: 1
+
+  DownstreamAnalysis:
+    - ApplicationProfileName: GMSTwistSolid
+      ApplicationProfileVersion: 1
+      DependsOn: BCLConvertNextera
+    - ApplicationProfileName: GmcNorrScoutAnnotation
+      ApplicationProfileVersion: 1
+      DependsOn: GMSTwistSolid
