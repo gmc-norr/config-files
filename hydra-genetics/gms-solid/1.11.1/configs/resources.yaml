@@ -14,6 +14,11 @@ bwa_mem:
   threads: 15
   mem_mb: 60000
 
+bwa_mem2:
+  time: "8:00:00"
+  threads: 16
+  mem_mb: 64000
+
 bwa_mem_realign_consensus_reads:
   time: "8:00:00"
   threads: 10
