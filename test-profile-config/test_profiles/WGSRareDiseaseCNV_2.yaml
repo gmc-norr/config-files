@@ -6,5 +6,5 @@ Version: 1.0
 
 TestApplicationProfiles:
   DownstreamAnalysis:
-    - ApplicationProfileName: NfCoreRareDiseaseCNVRerun
+    - ApplicationProfileName: NfCoreRareDiseaseCNV
       ApplicationProfileVersion: 1
