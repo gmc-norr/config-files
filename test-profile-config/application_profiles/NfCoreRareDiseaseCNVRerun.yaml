@@ -8,4 +8,3 @@ Settings:
   Version: 2.4.0
   Profile: clinical
   ConfigVersion: v0.6.3
-  AdditionalArguments: "-- --skip_snv_calling"
